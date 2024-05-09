@@ -1,0 +1,168 @@
+import { eContractid, IReserveParams } from "../../helpers/types";
+
+import {
+  rateStrategyVolatileTwo,
+} from "./rateStrategies";
+
+export const strategyMBTC: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyVOYA: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyHUHU: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyMSATS: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyMRATS: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+
+export const strategyMP: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyMNER: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyBNBS: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyMSTAR: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};

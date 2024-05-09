@@ -1,0 +1,15 @@
+{
+  "PoolAddressesProviderRegistry": 1710877445,
+  "LogicLibraries": 1710877670,
+  "Treasury": 1710877684,
+  "PoolAddressesProvider:Merlin:aave-v3-core@1.19.3": 1710877706,
+  "PoolConfigurator": 1710877738,
+  "ACLManager:Merlin:aave-v3-core@1.19.3": 1710877762,
+  "Oracles:Merlin:aave-v3-core@1.19.3": 1710877765,
+  "InitOracles:Merlin:aave-v3-core@1.19.3": 1710877766,
+  "PoolInitalization:Merlin:aave-v3-core@1.19.3": 1710877791,
+  "Incentives:Merlin:aave-v3-periphery@2.5.2": 1710877818,
+  "TokenImplementations:Merlin:aave-v3-core@1.19.3": 1710877868,
+  "ReservesInit:Merlin:aave-v3-core@1.19.3": 1710877904,
+  "PeripheryInit:Merlin:aave-v3-periphery@2.5.2": 1710877904
+}
