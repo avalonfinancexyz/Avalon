@@ -68,7 +68,8 @@
     "deploy:market:merlin:test": "FORK=merlin-testnet MARKET_NAME=Merlin npm run deploy",
     "deploy:market:merlinInn:test": "FORK=merlin-inn MARKET_NAME=MerlinInn npm run deploy",
     "deploy:market:bevm:fork": "FORK=bevm MARKET_NAME=Bevm npm run deploy",
-    "deploy:market:bitlayer:fork": "FORK=bitlayer MARKET_NAME=Bitlayer npm run deploy"
+    "deploy:market:bitlayer:fork": "FORK=bitlayer MARKET_NAME=Bitlayer npm run deploy",
+    "deploy:market:bsc:fork": "FORK=bsc MARKET_NAME=Bsc npm run deploy"
   },
   "peerDependencies": {
     "@aave/core-v3": "x || >=1.0.0-beta || >=3.0.0-beta",

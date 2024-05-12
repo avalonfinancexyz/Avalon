@@ -11,6 +11,7 @@ import {
   eMerlinNetwork,
   eBevmNetwork,
   eBitlayerNetwork,
+  eBscNetwork,
 } from "./types";
 
 const {
@@ -56,6 +57,9 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eBevmNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
   [eBitlayerNetwork.main]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
   [eBitlayerNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
+
+  [eBscNetwork.main]: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+  [eBscNetwork.testnet]: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
 };
 
 export const ZERO_BYTES_32 =
@@ -128,6 +132,9 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
+
+  [eBscNetwork.main]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
+  [eBscNetwork.testnet]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
 };
 
 export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
@@ -162,6 +169,9 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
+
+  [eBscNetwork.main]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
+  [eBscNetwork.testnet]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
 };
 
 export const ETHEREUM_SHORT_EXECUTOR =
@@ -190,6 +200,9 @@ export const POOL_ADMIN: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  [eBscNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBscNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
@@ -209,6 +222,9 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  [eBscNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBscNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
 export const DEFAULT_NAMED_ACCOUNTS = {
@@ -265,6 +281,9 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
 
   [eBitlayerNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  [eBscNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBscNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
 export const INCENTIVES_REWARDS_VAULT: { [key: string]: string } = {

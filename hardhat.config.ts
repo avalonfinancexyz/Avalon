@@ -18,6 +18,7 @@ import {
   eMerlinNetwork,
   eBevmNetwork,
   eBitlayerNetwork,
+  eBscNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -148,6 +149,15 @@ export default {
     [eBitlayerNetwork.testnet]: getCommonNetworkConfig(
       eBitlayerNetwork.testnet,
       200810
+    ),
+
+    [eBscNetwork.main]: getCommonNetworkConfig(
+      eBscNetwork.main,
+      56
+    ),
+    [eBscNetwork.testnet]: getCommonNetworkConfig(
+      eBscNetwork.testnet,
+      97
     ),
   },
   namedAccounts: {

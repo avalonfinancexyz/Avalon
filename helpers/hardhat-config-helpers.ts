@@ -15,6 +15,7 @@ import {
   eMerlinNetwork,
   eBevmNetwork,
   eBitlayerNetwork,
+  eBscNetwork
 } from "./types";
 
 require("dotenv").config();
@@ -108,6 +109,8 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBevmNetwork.testnet]: `https://rpc-canary-1.bevm.io`,
   [eBitlayerNetwork.main]: `https://rpc.bitlayer-rpc.com`,
   [eBitlayerNetwork.testnet]: `https://testnet-rpc.bitlayer-rpc.com`,
+  [eBscNetwork.main]: `https://rpc-bsc.48.club`,
+  [eBscNetwork.testnet]: `https://bsc-testnet.blockpi.network/v1/rpc/public`,
 };
 
 export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
@@ -126,6 +129,8 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBevmNetwork.testnet]: true,
   [eBitlayerNetwork.main]: true,
   [eBitlayerNetwork.testnet]: true,
+  [eBscNetwork.main]: true,
+  [eBscNetwork.testnet]: true,
 };
 
 const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {

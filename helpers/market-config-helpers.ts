@@ -44,6 +44,7 @@ import {
 import { ENABLE_REWARDS } from "./env";
 import BevmConfig from "../markets/bevm";
 import BitlayerConfig from "../markets/bitlayer";
+import BscConfig from "../markets/bsc";
 
 declare var hre: HardhatRuntimeEnvironment;
 
@@ -64,6 +65,7 @@ export enum ConfigNames {
   MerlinInn = "MerlinInn",
   Bevm = "Bevm",
   Bitlayer = "Bitlayer",
+  Bsc = "Bsc",
 }
 
 export const getParamPerNetwork = <T>(
@@ -139,6 +141,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return BevmConfig;
     case ConfigNames.Bitlayer:
       return BitlayerConfig;
+    case ConfigNames.Bsc:
+      return BscConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(
