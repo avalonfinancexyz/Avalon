@@ -1,0 +1,16 @@
+{
+  "PoolAddressesProviderRegistry": 1715538814,
+  "LogicLibraries": 1715538854,
+  "Treasury": 1715538880,
+  "PoolAddressesProvider:Arbitrum:aave-v3-core@1.19.3": 1715538899,
+  "PoolConfigurator": 1715538917,
+  "ACLManager:Arbitrum:aave-v3-core@1.19.3": 1715538950,
+  "Oracles:Arbitrum:aave-v3-core@1.19.3": 1715538957,
+  "InitOracles:Arbitrum:aave-v3-core@1.19.3": 1715538960,
+  "PoolInitalization:Arbitrum:aave-v3-core@1.19.3": 1715538980,
+  "Incentives:Arbitrum:aave-v3-periphery@2.5.2": 1715539010,
+  "TokenImplementations:Arbitrum:aave-v3-core@1.19.3": 1715539045,
+  "ReservesInit:Arbitrum:aave-v3-core@1.19.3": 1715539098,
+  "PeripheryInit:Arbitrum:aave-v3-periphery@2.5.2": 1715539098,
+  "ParaswapAdapters:Arbitrum:aave-v3-periphery@2.5.2": 1715539132
+}

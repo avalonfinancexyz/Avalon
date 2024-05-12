@@ -181,7 +181,7 @@ export const EMPTY_STORAGE_SLOT =
   "0x0000000000000000000000000000000000000000000000000000000000000000";
 
 export const POOL_ADMIN: Record<string, string> = {
-  [eArbitrumNetwork.arbitrum]: "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb",
+  [eArbitrumNetwork.arbitrum]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
   [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
@@ -206,7 +206,7 @@ export const POOL_ADMIN: Record<string, string> = {
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
-  [eArbitrumNetwork.arbitrum]: "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb",
+  [eArbitrumNetwork.arbitrum]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
   [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
@@ -258,13 +258,13 @@ export const DEFAULT_NAMED_ACCOUNTS = {
 };
 
 export const GOVERNANCE_BRIDGE_EXECUTOR: { [key: string]: string } = {
-  [ePolygonNetwork.polygon]: "0xdc9A35B16DB4e126cFeDC41322b3a36454B1F772",
-  [eOptimismNetwork.main]: "0x7d9103572bE58FfE99dc390E8246f02dcAe6f611",
-  [eArbitrumNetwork.arbitrum]: "0x7d9103572bE58FfE99dc390E8246f02dcAe6f611",
+  // [ePolygonNetwork.polygon]: "0xdc9A35B16DB4e126cFeDC41322b3a36454B1F772",
+  // [eOptimismNetwork.main]: "0x7d9103572bE58FfE99dc390E8246f02dcAe6f611",
+  // [eArbitrumNetwork.arbitrum]: "0x7d9103572bE58FfE99dc390E8246f02dcAe6f611",
 };
 
 export const MULTISIG_ADDRESS: { [key: string]: string } = {
-  [eArbitrumNetwork.arbitrum]: "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb",
+  [eArbitrumNetwork.arbitrum]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
   [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",

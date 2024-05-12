@@ -9,6 +9,12 @@ import {
   strategyUSDT,
   strategySOLVBTC,
 } from "./reservesConfigs";
+import {
+  rateStrategyVolatileOne,
+  rateStrategyStableOne,
+  rateStrategyStableTwo,
+  rateStrategyVolatileTwo,
+} from "./rateStrategies";
 
 export const ArbitrumConfig: IAaveConfiguration = {
   ...AaveMarket,
@@ -60,6 +66,12 @@ export const ArbitrumConfig: IAaveConfiguration = {
       USDT: "0x3f3f5dF88dC9F13eac63DF89EC16ef6e7E25DdE7",
       SOLVBTC: "0x6ce185860a4963106506C203335A2910413708e9",
     },
+  },
+  RateStrategies: {
+    rateStrategyVolatileOne,
+    rateStrategyStableOne,
+    rateStrategyStableTwo,
+    rateStrategyVolatileTwo,
   },
 };
 
