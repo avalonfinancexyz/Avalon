@@ -139,6 +139,7 @@ const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eMerlinNetwork.main]: 60000001,
   [eMerlinNetwork.mainInn]: 60000001,
   [eBitlayerNetwork.main]: 100000008,
+  [eBscNetwork.main]: 3000000000
 };
 
 export const buildForkConfig = ():
