@@ -109,7 +109,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBevmNetwork.testnet]: `https://rpc-canary-1.bevm.io`,
   [eBitlayerNetwork.main]: `https://rpc.bitlayer-rpc.com`,
   [eBitlayerNetwork.testnet]: `https://testnet-rpc.bitlayer-rpc.com`,
-  [eBscNetwork.main]: `https://rpc-bsc.48.club`,
+  [eBscNetwork.main]: `https://bsc-dataseed1.defibit.io`,
   [eBscNetwork.testnet]: `https://bsc-testnet.blockpi.network/v1/rpc/public`,
 };
 
