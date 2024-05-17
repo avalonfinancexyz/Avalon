@@ -8,7 +8,7 @@ import {
 
 export const strategyWBTC: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
-  baseLTVAsCollateral: "4000",
+  baseLTVAsCollateral: "6000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",
   liquidationProtocolFee: "1000",
