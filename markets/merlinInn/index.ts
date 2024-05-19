@@ -14,7 +14,8 @@ import {
   strategyMP,
   strategyMNER,
   strategyBNBS,
-  strategyMSTAR
+  strategyMSTAR,
+  strategySOlVBTCSLP
  } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -46,6 +47,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
     MNER: strategyMNER,
     BNBS: strategyBNBS,
     MSTAR: strategyMSTAR,
+    SOlVBTCSLP: strategySOlVBTCSLP,
   },
   ReserveAssets: {
     [eMerlinNetwork.mainInn]: {
@@ -58,7 +60,8 @@ export const MerlinInnConfig: IAaveConfiguration = {
       esMP: "0x7126bd63713A7212792B08FA2c39d39190A4cF5b",
       MNER: "0x27622b326ff3ffa7dc10ae291800c3073b55aa39",
       BNBS: "0x33c70a08D0D427eE916576a7594b50d7F8f3FbE1",
-      MSTAR: "0x09401c470a76Ec07512EEDDEF5477BE74bac2338"
+      MSTAR: "0x09401c470a76Ec07512EEDDEF5477BE74bac2338",
+      SOlVBTCSLP: "0x4920FB03F3Ea1C189dd216751f8d073dd680A136"
     },
     [eMerlinNetwork.testnet]: {
       MBTC: "0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF",
@@ -109,6 +112,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
       MNER: "0xcA2Da6D2c91a472b49fe10a672E2324912e582c0",
       BNBS: "0x3994D80F4939EB3d14fE2DfAD7D16CC99102c74c",
       MSTAR: "0xf5d620c25Bb2620d5d39f7a5A46d563FfD6225AE",
+      SOlVBTCSLP: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
     },
     [eMerlinNetwork.testnet]: {},
   },
