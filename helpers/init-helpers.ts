@@ -281,7 +281,7 @@ export const getPairsTokenAggregator = (
 export const configureReservesByHelper = async (
   reservesParams: iMultiPoolsAssets<IReserveParams>,
   tokenAddresses: { [symbol: string]: tEthereumAddress }
-) => {
+) : Promise<string[]> => {
   const { deployer } = await hre.getNamedAccounts();
   const addressProviderArtifact = await hre.deployments.get(
     POOL_ADDRESSES_PROVIDER_ID
@@ -459,6 +459,7 @@ export const configureReservesByHelper = async (
       console.log(" - Calldata: ", calldata);
     }
   }
+  return tokens;
 };
 
 export const addMarketToRegistry = async (
