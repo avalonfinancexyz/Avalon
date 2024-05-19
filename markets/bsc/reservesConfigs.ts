@@ -80,11 +80,11 @@ export const strategyUSDT: IReserveParams = {
 
 export const strategySOLVBTC: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
-  baseLTVAsCollateral: "0",
-  liquidationThreshold: "0",
-  liquidationBonus: "0",
+  baseLTVAsCollateral: "4000",
+  liquidationThreshold: "7500",
+  liquidationBonus: "12000",
   liquidationProtocolFee: "1000",
-  borrowingEnabled: false,
+  borrowingEnabled: true,
   stableBorrowRateEnabled: false,
   flashLoanEnabled: false,
   reserveDecimals: "18",
@@ -98,11 +98,11 @@ export const strategySOLVBTC: IReserveParams = {
 
 export const strategyBTCB: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
-  baseLTVAsCollateral: "0",
-  liquidationThreshold: "0",
-  liquidationBonus: "0",
+  baseLTVAsCollateral: "4000",
+  liquidationThreshold: "7500",
+  liquidationBonus: "12000",
   liquidationProtocolFee: "1000",
-  borrowingEnabled: false,
+  borrowingEnabled: true,
   stableBorrowRateEnabled: false,
   flashLoanEnabled: false,
   reserveDecimals: "18",
