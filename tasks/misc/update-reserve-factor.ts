@@ -94,19 +94,33 @@ task(`update-reserve-factor`, `update reserve factor`)
           console.log(formatters.console.format(delta, expectedFactor));
 
           if (fix) {
-            console.log("  - Update a new factor of asset");
-            await waitForTx(
-              await poolConfigurator.setReserveFactor(
-                tokenAddress,
+            const aclAdmin = await hre.ethers.getSigner(
+              await poolAddressesProvider.getACLAdmin()
+            );
+            const isAdmin = aclAdmin.address == deployer;
+            if(isAdmin){
+              console.log("  - Update a new factor of asset");
+              await waitForTx(
+                await poolConfigurator.setReserveFactor(
+                  tokenAddress,
+                  expectedFactor
+                )
+              );
+              console.log(
+                "  - Updated Reserve Factor of",
+                normalizedSymbol,
+                "at",
                 expectedFactor
-              )
-            );
-            console.log(
-              "  - Updated Reserve Factor of",
-              normalizedSymbol,
-              "at",
-              expectedFactor
-            );
+              );
+            } else {
+              console.log(` - Not admin, executed setReserveFactor from multisig:`, aclAdmin.address);
+              const calldata = poolConfigurator.interface.encodeFunctionData(
+                "setReserveFactor",
+                [tokenAddress, expectedFactor]
+              );
+              console.log(" - poolConfigurator: ", poolConfigurator.address);
+              console.log(" - Calldata: ", calldata);
+            }
           }
         } else {
           console.log(

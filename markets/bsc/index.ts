@@ -18,6 +18,8 @@ import {
   rateStrategyStableOne,
   rateStrategyStableTwo,
   rateStrategyVolatileTwo,
+  rateStrategyStableThree,
+  rateStrategyVolatileThree
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 
@@ -100,6 +102,8 @@ export const BscConfig: IAaveConfiguration = {
     rateStrategyStableOne,
     rateStrategyStableTwo,
     rateStrategyVolatileTwo,
+    rateStrategyStableThree,
+    rateStrategyVolatileThree
   },
 };
 

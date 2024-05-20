@@ -4,10 +4,12 @@ import {
   rateStrategyVolatileTwo,
   rateStrategyStableTwo,
   rateStrategyVolatileOne,
+  rateStrategyVolatileThree,
+  rateStrategyStableThree,
 } from "./rateStrategies";
 
 export const strategyMBTC: IReserveParams = {
-  strategy: rateStrategyVolatileTwo,
+  strategy: rateStrategyVolatileThree,
   baseLTVAsCollateral: "4000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",
@@ -17,7 +19,7 @@ export const strategyMBTC: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "30",
   debtCeiling: "0",
@@ -25,7 +27,7 @@ export const strategyMBTC: IReserveParams = {
 };
 
 export const strategyWBTC: IReserveParams = {
-  strategy: rateStrategyVolatileTwo,
+  strategy: rateStrategyVolatileThree,
   baseLTVAsCollateral: "4000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",
@@ -35,7 +37,7 @@ export const strategyWBTC: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "30",
   debtCeiling: "0",
@@ -53,7 +55,7 @@ export const strategyMETH: IReserveParams = {
   flashLoanEnabled: false,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "4000",
   debtCeiling: "0",
@@ -79,7 +81,7 @@ export const strategyMETH: IReserveParams = {
 // };
 
 export const strategyMUSDC: IReserveParams = {
-  strategy: rateStrategyStableTwo,
+  strategy: rateStrategyStableThree,
   baseLTVAsCollateral: "5000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",
@@ -89,7 +91,7 @@ export const strategyMUSDC: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "6",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "1000000",
   debtCeiling: "0",
@@ -115,7 +117,7 @@ export const strategyMUSDC: IReserveParams = {
 // };
 
 export const strategyMUSDT: IReserveParams = {
-  strategy: rateStrategyStableTwo,
+  strategy: rateStrategyStableThree,
   baseLTVAsCollateral: "5000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",
@@ -125,7 +127,7 @@ export const strategyMUSDT: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "6",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "1000000",
   debtCeiling: "0",
@@ -143,7 +145,7 @@ export const strategyMORDI: IReserveParams = {
   flashLoanEnabled: false,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "0",
   debtCeiling: "0",
@@ -151,7 +153,7 @@ export const strategyMORDI: IReserveParams = {
 };
 
 export const strategySOLVBTC: IReserveParams = {
-  strategy: rateStrategyVolatileTwo,
+  strategy: rateStrategyVolatileThree,
   baseLTVAsCollateral: "3000",
   liquidationThreshold: "6500",
   liquidationBonus: "12500",
@@ -161,7 +163,7 @@ export const strategySOLVBTC: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "300",
   debtCeiling: "0",
@@ -179,7 +181,7 @@ export const strategyMERL: IReserveParams = {
   flashLoanEnabled: false,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "0",
   debtCeiling: "0",
@@ -197,7 +199,7 @@ export const strategyMSTONE: IReserveParams = {
   flashLoanEnabled: false,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "0",
   debtCeiling: "0",
