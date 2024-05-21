@@ -10,9 +10,9 @@ import {
 
 export const strategyMBTC: IReserveParams = {
   strategy: rateStrategyVolatileThree,
-  baseLTVAsCollateral: "4000",
-  liquidationThreshold: "7500",
-  liquidationBonus: "12000",
+  baseLTVAsCollateral: "5500",
+  liquidationThreshold: "8500",
+  liquidationBonus: "11000",
   liquidationProtocolFee: "1000",
   borrowingEnabled: true,
   stableBorrowRateEnabled: false,
@@ -28,9 +28,9 @@ export const strategyMBTC: IReserveParams = {
 
 export const strategyWBTC: IReserveParams = {
   strategy: rateStrategyVolatileThree,
-  baseLTVAsCollateral: "4000",
-  liquidationThreshold: "7500",
-  liquidationBonus: "12000",
+  baseLTVAsCollateral: "5500",
+  liquidationThreshold: "8500",
+  liquidationBonus: "11000",
   liquidationProtocolFee: "1000",
   borrowingEnabled: true,
   stableBorrowRateEnabled: false,
@@ -82,9 +82,9 @@ export const strategyMETH: IReserveParams = {
 
 export const strategyMUSDC: IReserveParams = {
   strategy: rateStrategyStableThree,
-  baseLTVAsCollateral: "5000",
-  liquidationThreshold: "7500",
-  liquidationBonus: "12000",
+  baseLTVAsCollateral: "7500",
+  liquidationThreshold: "9000",
+  liquidationBonus: "10500",
   liquidationProtocolFee: "1000",
   borrowingEnabled: true,
   stableBorrowRateEnabled: false,
@@ -118,9 +118,9 @@ export const strategyMUSDC: IReserveParams = {
 
 export const strategyMUSDT: IReserveParams = {
   strategy: rateStrategyStableThree,
-  baseLTVAsCollateral: "5000",
-  liquidationThreshold: "7500",
-  liquidationBonus: "12000",
+  baseLTVAsCollateral: "7500",
+  liquidationThreshold: "9000",
+  liquidationBonus: "10500",
   liquidationProtocolFee: "1000",
   borrowingEnabled: true,
   stableBorrowRateEnabled: false,
@@ -154,9 +154,9 @@ export const strategyMORDI: IReserveParams = {
 
 export const strategySOLVBTC: IReserveParams = {
   strategy: rateStrategyVolatileThree,
-  baseLTVAsCollateral: "3000",
-  liquidationThreshold: "6500",
-  liquidationBonus: "12500",
+  baseLTVAsCollateral: "5000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "11500",
   liquidationProtocolFee: "1000",
   borrowingEnabled: true,
   stableBorrowRateEnabled: false,
