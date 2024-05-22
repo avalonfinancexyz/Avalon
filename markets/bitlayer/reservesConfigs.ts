@@ -19,7 +19,7 @@ export const strategyWBTC: IReserveParams = {
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
   supplyCap: "0",
-  borrowCap: "300",
+  borrowCap: "1300",
   debtCeiling: "0",
   borrowableIsolation: false,
 };
