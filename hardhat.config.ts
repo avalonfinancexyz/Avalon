@@ -19,6 +19,7 @@ import {
   eBevmNetwork,
   eBitlayerNetwork,
   eBscNetwork,
+  eCoredaoNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -158,6 +159,15 @@ export default {
     [eBscNetwork.testnet]: getCommonNetworkConfig(
       eBscNetwork.testnet,
       97
+    ),
+
+    [eCoredaoNetwork.main]: getCommonNetworkConfig(
+      eCoredaoNetwork.main,
+      1116
+    ),
+    [eCoredaoNetwork.testnet]: getCommonNetworkConfig(
+      eCoredaoNetwork.testnet,
+      1115
     ),
   },
   namedAccounts: {
