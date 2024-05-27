@@ -4,11 +4,12 @@ import {
   rateStrategyVolatileTwo,
   rateStrategyStableTwo,
   rateStrategyVolatileOne,
-  rateStrategyVolatileThree
+  rateStrategyVolatileThree,
+  rateStrategyVolatileBTC,
 } from "./rateStrategies";
 
 export const strategyWBTC: IReserveParams = {
-  strategy: rateStrategyVolatileThree,
+  strategy: rateStrategyVolatileBTC,
   baseLTVAsCollateral: "6000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",

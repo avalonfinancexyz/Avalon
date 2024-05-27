@@ -19,6 +19,7 @@ import {
   rateStrategyVolatileTwo,
   rateStrategyStableThree,
   rateStrategyVolatileThree,
+  rateStrategyVolatileBTC,
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 
@@ -102,7 +103,8 @@ export const BitlayerConfig: IAaveConfiguration = {
     rateStrategyStableTwo,
     rateStrategyVolatileTwo,
     rateStrategyVolatileThree,
-    rateStrategyStableThree
+    rateStrategyStableThree,
+    rateStrategyVolatileBTC,
   },
 };
 
