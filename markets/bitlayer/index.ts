@@ -11,6 +11,7 @@ import {
   strategyUSDC,
   strategyUSDT,
   strategyBITUSD,
+  strategySTBTC,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -35,11 +36,12 @@ export const BitlayerConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    WBTC: strategyWBTC,
-    ETH: strategyETH,
-    USDC: strategyUSDC,
-    USDT: strategyUSDT,
-    BITUSD: strategyBITUSD,
+    // WBTC: strategyWBTC,
+    // ETH: strategyETH,
+    // USDC: strategyUSDC,
+    // USDT: strategyUSDT,
+    // BITUSD: strategyBITUSD,
+    STBTC: strategySTBTC,
   },
   ReserveAssets: {
     [eBitlayerNetwork.main]: {
@@ -48,6 +50,7 @@ export const BitlayerConfig: IAaveConfiguration = {
       USDC: "0x9827431e8b77e87c9894bd50b055d6be56be0030",
       USDT: "0xfe9f969faf8ad72a83b761138bf25de87eff9dd2",
       BITUSD: "0x07373d112EDc4570B46996Ad1187bc4ac9Fb5Ed0",
+      STBTC: "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3",
     },
     [eBitlayerNetwork.testnet]: {
       WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
@@ -87,11 +90,12 @@ export const BitlayerConfig: IAaveConfiguration = {
   EModes: {},
   ChainlinkAggregator: {
     [eBitlayerNetwork.main]: {
-      WBTC: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
-      ETH: "0xe5b89f1e56045ae92518f4130947583608e2e163",
+      WBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+      ETH: "0x6D783a5314b70504dF2A35a59Cf3BEAA6D48CFd1",
       USDC: "0x38fbaed34760231acff76601eaf7c30cef97b739",
       USDT: "0xa4886beb14e27bc6de4a504eb43e1a7b20961fa4",
       BITUSD: "0xD62d417Ccf5A7CF8022aF7CaE7F736d4069e9aaC",
+      STBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
     },
     [eBitlayerNetwork.testnet]: {
       WBTC: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
