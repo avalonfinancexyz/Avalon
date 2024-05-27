@@ -11,7 +11,7 @@ import {
   strategyUSDC,
   strategyUSDT,
   strategySOLVBTC,
-  strategyBTCB
+  strategyBTCB,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -19,7 +19,8 @@ import {
   rateStrategyStableTwo,
   rateStrategyVolatileTwo,
   rateStrategyStableThree,
-  rateStrategyVolatileThree
+  rateStrategyVolatileThree,
+  rateStrategyVolatileBTCOne,
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 
@@ -40,7 +41,7 @@ export const BscConfig: IAaveConfiguration = {
     USDC: strategyUSDC,
     USDT: strategyUSDT,
     SOLVBTC: strategySOLVBTC,
-    BTCB: strategyBTCB
+    BTCB: strategyBTCB,
   },
   ReserveAssets: {
     [eBscNetwork.main]: {
@@ -49,7 +50,7 @@ export const BscConfig: IAaveConfiguration = {
       USDC: "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
       USDT: "0x55d398326f99059fF775485246999027B3197955",
       SOLVBTC: "0x4aae823a6a0b376de6a78e74ecc5b079d38cbcf7",
-      BTCB: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c"
+      BTCB: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
     },
     [eBscNetwork.testnet]: {
       WBNB: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
@@ -103,7 +104,8 @@ export const BscConfig: IAaveConfiguration = {
     rateStrategyStableTwo,
     rateStrategyVolatileTwo,
     rateStrategyStableThree,
-    rateStrategyVolatileThree
+    rateStrategyVolatileThree,
+    rateStrategyVolatileBTCOne,
   },
 };
 
