@@ -36,11 +36,11 @@ export const BitlayerConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    // WBTC: strategyWBTC,
-    // ETH: strategyETH,
-    // USDC: strategyUSDC,
-    // USDT: strategyUSDT,
-    // BITUSD: strategyBITUSD,
+    WBTC: strategyWBTC,
+    ETH: strategyETH,
+    USDC: strategyUSDC,
+    USDT: strategyUSDT,
+    BITUSD: strategyBITUSD,
     STBTC: strategySTBTC,
   },
   ReserveAssets: {
