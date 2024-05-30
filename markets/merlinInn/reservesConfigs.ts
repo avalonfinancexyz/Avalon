@@ -1,8 +1,6 @@
 import { eContractid, IReserveParams } from "../../helpers/types";
 
-import {
-  rateStrategyVolatileTwo,
-} from "./rateStrategies";
+import { rateStrategyVolatileTwo } from "./rateStrategies";
 
 export const strategyMBTC: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
@@ -94,7 +92,6 @@ export const strategyMRATS: IReserveParams = {
   borrowableIsolation: false,
 };
 
-
 export const strategyMP: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
   baseLTVAsCollateral: "0",
@@ -168,6 +165,42 @@ export const strategyMSTAR: IReserveParams = {
 };
 
 export const strategySOlVBTCSLP: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyWBTCSLP: IReserveParams = {
+  strategy: rateStrategyVolatileTwo,
+  baseLTVAsCollateral: "0",
+  liquidationThreshold: "0",
+  liquidationBonus: "0",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyMBTCSLP: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
   baseLTVAsCollateral: "0",
   liquidationThreshold: "0",
