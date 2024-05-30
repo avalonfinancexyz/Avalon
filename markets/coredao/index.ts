@@ -34,18 +34,18 @@ export const CoredaoConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    // WCORE: strategyWCORE,
-    // COREBTC: strategyCOREBTC,
-    // USDC: strategyUSDC,
-    // USDT: strategyUSDT,
+    WCORE: strategyWCORE,
+    COREBTC: strategyCOREBTC,
+    USDC: strategyUSDC,
+    USDT: strategyUSDT,
     SOLVBTC: strategySOLVBTC,
   },
   ReserveAssets: {
     [eCoredaoNetwork.main]: {
-      // WCORE: "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
-      // COREBTC: "0x8034aB88C3512246Bf7894f57C834DdDBd1De01F",
-      // USDC: "0xa4151b2b3e269645181dccf2d426ce75fcbdeca9",
-      // USDT: "0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1",
+      WCORE: "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
+      COREBTC: "0x8034aB88C3512246Bf7894f57C834DdDBd1De01F",
+      USDC: "0xa4151b2b3e269645181dccf2d426ce75fcbdeca9",
+      USDT: "0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1",
       SOLVBTC: "0x5B1Fb849f1F76217246B8AAAC053b5C7b15b7dc3",
     },
     [eCoredaoNetwork.testnet]: {
@@ -83,11 +83,11 @@ export const CoredaoConfig: IAaveConfiguration = {
   EModes: {},
   ChainlinkAggregator: {
     [eCoredaoNetwork.main]: {
-      WCORE: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
-      COREBTC: "0x1280036a9da98f35536c7ef07a78c97b38d10e40",
-      USDC: "0xe05e46a42d05fcad5fa52f443d5963635aaf7a06",
-      USDT: "0x2be335322f05aff78e4b231c9f175cba9ae31729",
-      SOLVBTC: "0x1280036a9da98f35536c7ef07a78c97b38d10e40",
+      WCORE: "0x6b0e702586c6091af8da8ab64710916f0a58b72f",
+      COREBTC: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
+      USDC: "0x6361b75086d28c45bc5b5529cdfcc71a3b3b54c4",
+      USDT: "0x2efb68fa0c4fc0a16537ff0af09d86005c267946",
+      SOLVBTC: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
     },
     [eCoredaoNetwork.testnet]: {
       WCORE: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
