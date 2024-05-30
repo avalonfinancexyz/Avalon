@@ -21,7 +21,7 @@ export const strategyMBTC: IReserveParams = {
   aTokenImpl: eContractid.AToken,
   reserveFactor: "500",
   supplyCap: "0",
-  borrowCap: "30",
+  borrowCap: "60",
   debtCeiling: "0",
   borrowableIsolation: false,
 };
@@ -184,7 +184,7 @@ export const strategyMERL: IReserveParams = {
   reserveFactor: "500",
   supplyCap: "0",
   borrowCap: "0",
-  debtCeiling: "0",
+  debtCeiling: "100000000",
   borrowableIsolation: false,
 };
 

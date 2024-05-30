@@ -44,6 +44,7 @@ export const MerlinConfig: IAaveConfiguration = {
     SOLVBTC: strategySOLVBTC,
     MERL: strategyMERL,
     MSTONE: strategyMSTONE,
+    ORDI: strategyMORDI,
   },
   ReserveAssets: {
     [eMerlinNetwork.main]: {
@@ -55,6 +56,7 @@ export const MerlinConfig: IAaveConfiguration = {
       SOLVBTC: "0x41D9036454BE47d3745A823C4aaCD0e29cFB0f71",
       MERL: "0x5c46bFF4B38dc1EAE09C5BAc65872a1D8bc87378",
       MSTONE: "0xB5d8b1e73c79483d7750C5b8DF8db45A0d24e2cf",
+      ORDI: "0x7dcb50b2180BC896Da1200D2726a88AF5D2cBB5A",
     },
     [eMerlinNetwork.testnet]: {
       MBTC: "0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF",
@@ -158,6 +160,7 @@ export const MerlinConfig: IAaveConfiguration = {
       SOLVBTC: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
       MERL: "0x7c8cacdf03f842e883bb3a09811b5d04405f8ea8",
       MSTONE: "0xDdd5DbF22A5e5140fe9964309Af4bE65D6A7c1C9",
+      ORDI: "0xff7013bc8123f801957e67bde37bcab222daf181",
     },
     [eMerlinNetwork.testnet]: {
       MBTC: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
