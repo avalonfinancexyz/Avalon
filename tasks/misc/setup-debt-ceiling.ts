@@ -5,7 +5,10 @@ import {
   ConfigNames,
   loadPoolConfig,
 } from "../../helpers/market-config-helpers";
-import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
+import {
+  getPoolConfiguratorProxy,
+  getPoolAddressesProvider,
+} from "../../helpers/contract-getters";
 import { BigNumber } from "ethers";
 import { MARKET_NAME } from "../../helpers/env";
 
@@ -16,6 +19,8 @@ task(
   const { poolAdmin } = await hre.getNamedAccounts();
   const config = await loadPoolConfig(MARKET_NAME as ConfigNames);
 
+  const poolAddressesProvider = await getPoolAddressesProvider();
+  const admin = await poolAddressesProvider.owner();
   const poolConfigurator = (await getPoolConfiguratorProxy()).connect(
     await hre.ethers.getSigner(poolAdmin)
   );
@@ -28,9 +33,23 @@ task(
     const assetAddress = await getReserveAddress(config, asset);
 
     if (debtCeiling.gt("0")) {
-      await waitForTx(
-        await poolConfigurator.setDebtCeiling(assetAddress, debtCeiling)
-      );
+      const isAdmin = admin == poolAdmin;
+      if (isAdmin) {
+        await waitForTx(
+          await poolConfigurator.setDebtCeiling(assetAddress, debtCeiling)
+        );
+      } else {
+        console.log(
+          ` - Not pool admin, executed setDebtCeiling from multisig:`,
+          admin
+        );
+        const calldata = poolConfigurator.interface.encodeFunctionData(
+          "setDebtCeiling",
+          [assetAddress, debtCeiling]
+        );
+        console.log(" - poolConfigurator: ", poolConfigurator.address);
+        console.log(" - Calldata: ", calldata);
+      }
       console.log(
         "- Updated debt ceiling of",
         asset,
