@@ -18,6 +18,7 @@ import {
   strategySOlVBTCSLP,
   strategyWBTCSLP,
   strategyMBTCSLP,
+  strategyDOG,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -52,6 +53,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
     SOlVBTCSLP: strategySOlVBTCSLP,
     WBTCSLP: strategyWBTCSLP,
     MBTCSLP: strategyMBTCSLP,
+    DOG: strategyDOG,
   },
   ReserveAssets: {
     [eMerlinNetwork.mainInn]: {
@@ -68,6 +70,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
       SOlVBTCSLP: "0x4920FB03F3Ea1C189dd216751f8d073dd680A136",
       WBTCSLP: "0xb00db5fAAe7682d80cA3CE5019E710ca08Bfbd66",
       MBTCSLP: "0xa41a8C64a324cD00CB70C2448697E248EA0b1ff2",
+      DOG: "0x32A4b8b10222F85301874837F27F4c416117B811",
     },
     [eMerlinNetwork.testnet]: {
       MBTC: "0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF",
@@ -121,6 +124,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
       SOlVBTCSLP: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
       WBTCSLP: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
       MBTCSLP: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
+      DOG: "0xa24608f95b28a4f6107d8c4f12d1297dfef73b47",
     },
     [eMerlinNetwork.testnet]: {},
   },
