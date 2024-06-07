@@ -12,6 +12,7 @@ import {
   strategyUSDT,
   strategyBITUSD,
   strategySTBTC,
+  strategySOLVBTC,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -42,6 +43,7 @@ export const BitlayerConfig: IAaveConfiguration = {
     USDT: strategyUSDT,
     BITUSD: strategyBITUSD,
     STBTC: strategySTBTC,
+    SOLVBTC: strategySOLVBTC,
   },
   ReserveAssets: {
     [eBitlayerNetwork.main]: {
@@ -51,6 +53,7 @@ export const BitlayerConfig: IAaveConfiguration = {
       USDT: "0xfe9f969faf8ad72a83b761138bf25de87eff9dd2",
       BITUSD: "0x07373d112EDc4570B46996Ad1187bc4ac9Fb5Ed0",
       STBTC: "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3",
+      SOLVBTC: "0xe04d21d999faedf1e72ade6629e20a11a1ed14fa",
     },
     [eBitlayerNetwork.testnet]: {
       WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
@@ -96,6 +99,7 @@ export const BitlayerConfig: IAaveConfiguration = {
       USDT: "0xa4886beb14e27bc6de4a504eb43e1a7b20961fa4",
       BITUSD: "0xD62d417Ccf5A7CF8022aF7CaE7F736d4069e9aaC",
       STBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+      SOLVBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
     },
     [eBitlayerNetwork.testnet]: {
       WBTC: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
