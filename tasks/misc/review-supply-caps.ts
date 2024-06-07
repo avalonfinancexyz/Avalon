@@ -8,7 +8,10 @@ import { loadPoolConfig } from "../../helpers/market-config-helpers";
 import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
 import { task } from "hardhat/config";
 import { waitForTx } from "../../helpers/utilities/tx";
-import { getAaveProtocolDataProvider } from "../../helpers/contract-getters";
+import {
+  getAaveProtocolDataProvider,
+  getPoolAddressesProvider,
+} from "../../helpers/contract-getters";
 import { MARKET_NAME } from "../../helpers/env";
 import { FORK } from "../../helpers/hardhat-config-helpers";
 import chalk from "chalk";
@@ -26,6 +29,8 @@ task(`review-supply-caps`, ``)
     async ({ fix, checkOnly }: { fix: boolean; checkOnly: string }, hre) => {
       const network = FORK ? FORK : (hre.network.name as eNetwork);
       const { poolAdmin } = await hre.getNamedAccounts();
+      const poolAddressesProvider = await getPoolAddressesProvider();
+      const admin = await poolAddressesProvider.owner();
       const checkOnlyReserves: string[] = checkOnly ? checkOnly.split(",") : [];
       const dataProvider = await getAaveProtocolDataProvider(
         await getAddressFromJson(network, POOL_DATA_PROVIDER)
@@ -101,10 +106,28 @@ task(`review-supply-caps`, ``)
           if (!fix) {
             continue;
           }
+          const isAdmin = admin == poolAdmin;
           console.log("[FIX] Updating the supply cap for", normalizedSymbol);
-          await waitForTx(
-            await poolConfigurator.setSupplyCap(tokenAddress, expectedSupplyCap)
-          );
+          if (isAdmin) {
+            await waitForTx(
+              await poolConfigurator.setSupplyCap(
+                tokenAddress,
+                expectedSupplyCap
+              )
+            );
+          } else {
+            console.log(
+              ` - Not pool admin, executed setSupplyCap from multisig:`,
+              admin
+            );
+            const calldata = poolConfigurator.interface.encodeFunctionData(
+              "setSupplyCap",
+              [tokenAddress, expectedSupplyCap]
+            );
+            console.log(" - poolConfigurator: ", poolConfigurator.address);
+            console.log(" - Calldata: ", calldata);
+          }
+
           const newOnChainSupplyCap = (
             await dataProvider.getReserveCaps(tokenAddress)
           ).supplyCap.toString();

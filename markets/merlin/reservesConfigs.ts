@@ -172,9 +172,9 @@ export const strategySOLVBTC: IReserveParams = {
 
 export const strategyMERL: IReserveParams = {
   strategy: rateStrategyVolatileTwo,
-  baseLTVAsCollateral: "0",
-  liquidationThreshold: "0",
-  liquidationBonus: "0",
+  baseLTVAsCollateral: "2000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "12000",
   liquidationProtocolFee: "2000",
   borrowingEnabled: false,
   stableBorrowRateEnabled: false,
@@ -182,7 +182,7 @@ export const strategyMERL: IReserveParams = {
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
   reserveFactor: "500",
-  supplyCap: "0",
+  supplyCap: "30000000",
   borrowCap: "0",
   debtCeiling: "100000000",
   borrowableIsolation: false,
