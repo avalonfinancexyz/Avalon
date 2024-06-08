@@ -20,6 +20,7 @@ import {
   rateStrategyStableOne,
   rateStrategyStableTwo,
   rateStrategyVolatileTwo,
+  rateStrategyVolatileBTC,
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 

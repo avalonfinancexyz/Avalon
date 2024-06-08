@@ -4,12 +4,12 @@ import {
   rateStrategyVolatileTwo,
   rateStrategyStableTwo,
   rateStrategyVolatileOne,
-  rateStrategyVolatileThree,
+  rateStrategyVolatileBTC,
   rateStrategyStableThree,
 } from "./rateStrategies";
 
 export const strategyMBTC: IReserveParams = {
-  strategy: rateStrategyVolatileThree,
+  strategy: rateStrategyVolatileBTC,
   baseLTVAsCollateral: "5500",
   liquidationThreshold: "8500",
   liquidationBonus: "11000",
@@ -27,7 +27,7 @@ export const strategyMBTC: IReserveParams = {
 };
 
 export const strategyWBTC: IReserveParams = {
-  strategy: rateStrategyVolatileThree,
+  strategy: rateStrategyVolatileBTC,
   baseLTVAsCollateral: "5500",
   liquidationThreshold: "8500",
   liquidationBonus: "11000",
@@ -153,7 +153,7 @@ export const strategyMORDI: IReserveParams = {
 };
 
 export const strategySOLVBTC: IReserveParams = {
-  strategy: rateStrategyVolatileThree,
+  strategy: rateStrategyVolatileBTC,
   baseLTVAsCollateral: "5000",
   liquidationThreshold: "8000",
   liquidationBonus: "11500",
