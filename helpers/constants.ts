@@ -211,8 +211,8 @@ export const POOL_ADMIN: Record<string, string> = {
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
-  [eBscNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
-  [eBscNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
+  [eBscNetwork.testnet]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -236,8 +236,8 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
-  [eBscNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
-  [eBscNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
+  [eBscNetwork.testnet]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -298,8 +298,8 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
-  [eBscNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
-  [eBscNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
+  [eBscNetwork.testnet]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",

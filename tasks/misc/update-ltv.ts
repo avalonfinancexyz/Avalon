@@ -1,9 +1,6 @@
 import { task } from "hardhat/config";
 import { BigNumberish } from "ethers";
-import {
-  eNetwork,
-  loadPoolConfig,
-} from "../../helpers";
+import { eNetwork, loadPoolConfig } from "../../helpers";
 import {
   getPoolAddressesProvider,
   getPoolConfiguratorProxy,
@@ -21,13 +18,7 @@ task(`update-ltv`, `update ltv`)
   .addFlag("fix")
   .addOptionalParam("checkOnly")
   .setAction(
-    async (
-      {
-        fix,
-        checkOnly,
-      }: { fix: boolean; checkOnly: string; }, 
-      hre
-    ) => {
+    async ({ fix, checkOnly }: { fix: boolean; checkOnly: string }, hre) => {
       const network = (
         process.env.FORK ? process.env.FORK : hre.network.name
       ) as eNetwork;
@@ -53,10 +44,13 @@ task(`update-ltv`, `update ltv`)
 
       for (let index = 0; index < reservesToCheck.length; index++) {
         let { symbol, tokenAddress } = reservesToCheck[index];
-        
-        const normalizedSymbol = normalizedSymbols.find((s) =>
+
+        let normalizedSymbol = normalizedSymbols.find((s) =>
           symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
         );
+        if (symbol.includes(".ENA")) {
+          normalizedSymbol = `${normalizedSymbol}ENA`;
+        }
         if (!normalizedSymbol) {
           console.error(
             `- Missing address ${tokenAddress} at ReserveAssets configuration.`
@@ -71,34 +65,32 @@ task(`update-ltv`, `update ltv`)
           normalizedSymbol
         );
         const {
-          baseLTVAsCollateral :expectedBaseLTV, 
-          liquidationThreshold: expectedLiquidationThreshold, 
-          liquidationBonus: expectedliquidationBonus 
+          baseLTVAsCollateral: expectedBaseLTV,
+          liquidationThreshold: expectedLiquidationThreshold,
+          liquidationBonus: expectedliquidationBonus,
         } = poolConfig.ReservesConfig[normalizedSymbol.toUpperCase()];
-          
-        let { 
-          ltv: baseLTV, 
-          liquidationThreshold: onchainLiqThreshold, 
-          liquidationBonus: onchinLiqBonus 
+
+        let {
+          ltv: baseLTV,
+          liquidationThreshold: onchainLiqThreshold,
+          liquidationBonus: onchinLiqBonus,
         } = await dataProvider.getReserveConfigurationData(tokenAddress);
 
         const configData = {
           ltv: expectedBaseLTV,
           liqThreshold: expectedLiquidationThreshold,
-          liqBonus: expectedliquidationBonus
-        }
+          liqBonus: expectedliquidationBonus,
+        };
 
         const onChainData = {
           ltv: baseLTV.toString(),
           liqThreshold: onchainLiqThreshold.toString(),
-          liqBonus: onchinLiqBonus.toString()
-        }
+          liqBonus: onchinLiqBonus.toString(),
+        };
         const delta = diff(onChainData, configData);
         if (delta) {
           console.log(
-            `- Found ${chalk.red(
-              "differences"
-            )} at reserve ${normalizedSymbol}`
+            `- Found ${chalk.red("differences")} at reserve ${normalizedSymbol}`
           );
           console.log(
             chalk.red(
@@ -112,7 +104,7 @@ task(`update-ltv`, `update ltv`)
           if (fix) {
             const isAdmin = admin == deployer;
             console.log("  - Update a new ltv of asset");
-            if(isAdmin){
+            if (isAdmin) {
               await waitForTx(
                 await poolConfigurator.configureReserveAsCollateral(
                   tokenAddress,
@@ -128,10 +120,18 @@ task(`update-ltv`, `update ltv`)
                 configData
               );
             } else {
-              console.log(` - Not pool admin, executed setReserveInterestRateStrategyAddress from multisig:`, admin);
+              console.log(
+                ` - Not pool admin, executed setReserveInterestRateStrategyAddress from multisig:`,
+                admin
+              );
               const calldata = poolConfigurator.interface.encodeFunctionData(
                 "configureReserveAsCollateral",
-                [tokenAddress, configData.ltv, configData.liqThreshold, configData.liqBonus]
+                [
+                  tokenAddress,
+                  configData.ltv,
+                  configData.liqThreshold,
+                  configData.liqBonus,
+                ]
               );
               console.log(" - poolConfigurator: ", poolConfigurator.address);
               console.log(" - Calldata: ", calldata);

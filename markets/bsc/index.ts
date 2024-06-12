@@ -12,6 +12,7 @@ import {
   strategyUSDT,
   strategySOLVBTC,
   strategyBTCB,
+  strategySOLVBTCENA,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -42,6 +43,7 @@ export const BscConfig: IAaveConfiguration = {
     USDT: strategyUSDT,
     SOLVBTC: strategySOLVBTC,
     BTCB: strategyBTCB,
+    SOLVBTCENA: strategySOLVBTCENA,
   },
   ReserveAssets: {
     [eBscNetwork.main]: {
@@ -51,6 +53,7 @@ export const BscConfig: IAaveConfiguration = {
       USDT: "0x55d398326f99059fF775485246999027B3197955",
       SOLVBTC: "0x4aae823a6a0b376de6a78e74ecc5b079d38cbcf7",
       BTCB: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      SOLVBTCENA: "0x53E63a31fD1077f949204b94F431bCaB98F72BCE",
     },
     [eBscNetwork.testnet]: {
       WBNB: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
@@ -93,6 +96,7 @@ export const BscConfig: IAaveConfiguration = {
       USDT: "0xB97Ad0E74fa7d920791E90258A6E2085088b4320",
       SOLVBTC: "0x264990fbd0A4796A3E3d8E37C4d5F87a3aCa5Ebf",
       BTCB: "0x264990fbd0A4796A3E3d8E37C4d5F87a3aCa5Ebf",
+      SOLVBTCENA: "0x264990fbd0A4796A3E3d8E37C4d5F87a3aCa5Ebf",
     },
     [eBscNetwork.testnet]: {
       WBNB: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
