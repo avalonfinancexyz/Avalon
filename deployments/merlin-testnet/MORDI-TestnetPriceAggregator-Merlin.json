@@ -1,5 +1,5 @@
 {
-  "address": "0x073283e6eA77D27Da258446c58931aC228F50feA",
+  "address": "0x7b3E55a4Dc6F027C1C491594C1809bD45E5B7DC4",
   "abi": [
     {
       "inputs": [
@@ -77,33 +77,33 @@
       "type": "function"
     }
   ],
-  "transactionHash": "0x5f092ce448424d8ada90ff547958aefdc2304bef94fc005191e1fc39e240a748",
+  "transactionHash": "0x40e43dd36e4f1c3e308b26e242d73084cd0e1e541f23ae1b406f20b27ede1c78",
   "receipt": {
     "to": null,
     "from": "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
-    "contractAddress": "0x073283e6eA77D27Da258446c58931aC228F50feA",
+    "contractAddress": "0x7b3E55a4Dc6F027C1C491594C1809bD45E5B7DC4",
     "transactionIndex": 0,
     "gasUsed": "114490",
-    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100020000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000480000001000000000000000000000000000004000000100000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
-    "blockHash": "0x6394f71b9b18e4f278c0c31410305d42e0feb555a89d545d0d112d6ba441e771",
-    "transactionHash": "0x5f092ce448424d8ada90ff547958aefdc2304bef94fc005191e1fc39e240a748",
+    "logsBloom": "0x00000000000000000002000000000000000000800000000000000000000000800000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000800000000000000000000000000000010000000000000000000000000000000000000000480000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x29bfa90e597e4eb4bcebb9936e5487739140d72f200f99cf363a4a6e70686e39",
+    "transactionHash": "0x40e43dd36e4f1c3e308b26e242d73084cd0e1e541f23ae1b406f20b27ede1c78",
     "logs": [
       {
         "transactionIndex": 0,
-        "blockNumber": 3660695,
-        "transactionHash": "0x5f092ce448424d8ada90ff547958aefdc2304bef94fc005191e1fc39e240a748",
-        "address": "0x073283e6eA77D27Da258446c58931aC228F50feA",
+        "blockNumber": 8859283,
+        "transactionHash": "0x40e43dd36e4f1c3e308b26e242d73084cd0e1e541f23ae1b406f20b27ede1c78",
+        "address": "0x7b3E55a4Dc6F027C1C491594C1809bD45E5B7DC4",
         "topics": [
           "0x0559884fd3a460db3073b7fc896cc77986f16e378210ded43186175bf646fc5f",
           "0x0000000000000000000000000000000000000000000000000000000165a0bc00",
           "0x0000000000000000000000000000000000000000000000000000000000000000"
         ],
-        "data": "0x0000000000000000000000000000000000000000000000000000000065f5fb25",
+        "data": "0x00000000000000000000000000000000000000000000000000000000666d9d74",
         "logIndex": 0,
-        "blockHash": "0x6394f71b9b18e4f278c0c31410305d42e0feb555a89d545d0d112d6ba441e771"
+        "blockHash": "0x29bfa90e597e4eb4bcebb9936e5487739140d72f200f99cf363a4a6e70686e39"
       }
     ],
-    "blockNumber": 3660695,
+    "blockNumber": 8859283,
     "cumulativeGasUsed": "114490",
     "status": 1,
     "byzantium": true
@@ -112,7 +112,7 @@
     "6000000000"
   ],
   "numDeployments": 1,
-  "solcInputHash": "f83ccc030186e5b58439131350431de3",
+  "solcInputHash": "3f06d935438c665b05fda2751a27238b",
   "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"initialAnswer\",\"type\":\"int256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"int256\",\"name\":\"current\",\"type\":\"int256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"roundId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"updatedAt\",\"type\":\"uint256\"}],\"name\":\"AnswerUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@aave/core-v3/contracts/mocks/oracle/CLAggregators/MockAggregator.sol\":\"MockAggregator\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100000},\"remappings\":[]},\"sources\":{\"@aave/core-v3/contracts/mocks/oracle/CLAggregators/MockAggregator.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity ^0.8.0;\\n\\ncontract MockAggregator {\\n  int256 private _latestAnswer;\\n\\n  event AnswerUpdated(int256 indexed current, uint256 indexed roundId, uint256 updatedAt);\\n\\n  constructor(int256 initialAnswer) {\\n    _latestAnswer = initialAnswer;\\n    emit AnswerUpdated(initialAnswer, 0, block.timestamp);\\n  }\\n\\n  function latestAnswer() external view returns (int256) {\\n    return _latestAnswer;\\n  }\\n\\n  function getTokenType() external pure returns (uint256) {\\n    return 1;\\n  }\\n\\n  function decimals() external pure returns (uint8) {\\n    return 8;\\n  }\\n}\\n\",\"keccak256\":\"0xb9dc6ba54dcd7adf2dcd938c5cfa7540aa72bd09f644008efe411710ccf1dcdc\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b5060405161013838038061013883398101604081905261002f9161006f565b600081815560405142815282907f0559884fd3a460db3073b7fc896cc77986f16e378210ded43186175bf646fc5f9060200160405180910390a350610088565b60006020828403121561008157600080fd5b5051919050565b60a2806100966000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063313ce56714604157806350d25bcd146055578063fcab1819146066575b600080fd5b604051600881526020015b60405180910390f35b6000545b604051908152602001604c565b6001605956fea26469706673582212203a872d60c827ac7f4c6f0230536e38db03df6836ee905a53c50cf27cbbf5226664736f6c634300080a0033",
   "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063313ce56714604157806350d25bcd146055578063fcab1819146066575b600080fd5b604051600881526020015b60405180910390f35b6000545b604051908152602001604c565b6001605956fea26469706673582212203a872d60c827ac7f4c6f0230536e38db03df6836ee905a53c50cf27cbbf5226664736f6c634300080a0033",
