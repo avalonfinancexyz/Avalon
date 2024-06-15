@@ -21,6 +21,7 @@ import {
   rateStrategyStableTwo,
   rateStrategyVolatileTwo,
   rateStrategyVolatileBTC,
+  rateStrategyStableThree,
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 
@@ -34,10 +35,10 @@ export const MerlinConfig: IAaveConfiguration = {
   VariableDebtTokenNamePrefix: "Avalon",
   SymbolPrefix: "Mer",
   // for testent
-  TestnetMarket: false,
+  TestnetMarket: true,
   ReservesConfig: {
-    MBTC: strategyMBTC,
     WBTC: strategyWBTC,
+    MBTC: strategyMBTC,
     // METH: strategyMETH,
     MORDI: strategyMORDI,
     MUSDT: strategyMUSDT,
@@ -60,11 +61,15 @@ export const MerlinConfig: IAaveConfiguration = {
       ORDI: "0x7dcb50b2180BC896Da1200D2726a88AF5D2cBB5A",
     },
     [eMerlinNetwork.testnet]: {
-      MBTC: "0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF",
-      METH: ZERO_ADDRESS,
-      MORDI: ZERO_ADDRESS,
+      WBTC: ZERO_ADDRESS,
+      MBTC: ZERO_ADDRESS,
       MUSDT: ZERO_ADDRESS,
       MUSDC: ZERO_ADDRESS,
+      MORDI: ZERO_ADDRESS,
+      SOLVBTC: ZERO_ADDRESS,
+      MERL: ZERO_ADDRESS,
+      MSTONE: ZERO_ADDRESS,
+      ORDI: ZERO_ADDRESS,
     },
   },
   IncentivesConfig: {
@@ -79,10 +84,14 @@ export const MerlinConfig: IAaveConfiguration = {
       },
       [eMerlinNetwork.testnet]: {
         // AVAF: ZERO_ADDRESS,
-        POINTS: ZERO_ADDRESS,
+        ESAVAF: "0xBA54aCA52D57A3beF3bab451e568141D6fF0ebFB",
       },
     },
-    rewardsOracle: {},
+    rewardsOracle: {
+      [eMerlinNetwork.testnet]: {
+        ESAVAF: ZERO_ADDRESS,
+      },
+    },
     incentivesInput: {
       [eMerlinNetwork.main]: [
         // {
@@ -98,53 +107,23 @@ export const MerlinConfig: IAaveConfiguration = {
       ],
       [eMerlinNetwork.testnet]: [
         {
-          emissionPerSecond: "100",
-          duration: 7890000,
+          emissionPerSecond: "100000000000000000",
+          duration: 2592000,
           asset: "MBTC",
           assetType: AssetType.AToken,
-          reward: "POINTS",
+          reward: "ESAVAF",
           rewardOracle: "0",
-          transferStrategy: TransferStrategy.PullRewardsStrategy,
+          transferStrategy: TransferStrategy.EsRewardsStrategy,
           transferStrategyParams: "0",
         },
         {
-          emissionPerSecond: "240000000000000000",
+          emissionPerSecond: "100000000000000000",
           duration: 2592000,
-          asset: "METH",
+          asset: "MBTC",
           assetType: AssetType.VariableDebtToken,
-          reward: "POINTS",
+          reward: "ESAVAF",
           rewardOracle: "0",
-          transferStrategy: TransferStrategy.PullRewardsStrategy,
-          transferStrategyParams: "0",
-        },
-        {
-          emissionPerSecond: "240000000000000000",
-          duration: 2592000,
-          asset: "MORDI",
-          assetType: AssetType.VariableDebtToken,
-          reward: "POINTS",
-          rewardOracle: "0",
-          transferStrategy: TransferStrategy.PullRewardsStrategy,
-          transferStrategyParams: "0",
-        },
-        {
-          emissionPerSecond: "240000000000000000",
-          duration: 2592000,
-          asset: "MUSDT",
-          assetType: AssetType.VariableDebtToken,
-          reward: "POINTS",
-          rewardOracle: "0",
-          transferStrategy: TransferStrategy.PullRewardsStrategy,
-          transferStrategyParams: "0",
-        },
-        {
-          emissionPerSecond: "240000000000000000",
-          duration: 2592000,
-          asset: "MUSDC",
-          assetType: AssetType.VariableDebtToken,
-          reward: "POINTS",
-          rewardOracle: "0",
-          transferStrategy: TransferStrategy.PullRewardsStrategy,
+          transferStrategy: TransferStrategy.EsRewardsStrategy,
           transferStrategyParams: "0",
         },
       ],
@@ -164,11 +143,15 @@ export const MerlinConfig: IAaveConfiguration = {
       ORDI: "0xff7013bc8123f801957e67bde37bcab222daf181",
     },
     [eMerlinNetwork.testnet]: {
-      MBTC: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
-      METH: "0x1280036a9da98f35536c7ef07a78c97b38d10e40",
+      WBTC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
+      MBTC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
+      MUSDT: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
+      MUSDC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
       MORDI: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
-      MUSDT: "0xb968194fb0dcd029b4ac14834cc623270b6a56d1",
-      MUSDC: "0x821c3f40841b75f8849016de58a6939cab685ef4",
+      SOLVBTC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
+      MERL: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
+      MSTONE: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
+      ORDI: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
     },
   },
   RateStrategies: {
@@ -176,6 +159,8 @@ export const MerlinConfig: IAaveConfiguration = {
     rateStrategyStableOne,
     rateStrategyStableTwo,
     rateStrategyVolatileTwo,
+    rateStrategyVolatileBTC,
+    rateStrategyStableThree,
   },
 };
 

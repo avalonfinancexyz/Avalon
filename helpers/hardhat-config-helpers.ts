@@ -16,7 +16,7 @@ import {
   eBevmNetwork,
   eBitlayerNetwork,
   eBscNetwork,
-  eCoredaoNetwork
+  eCoredaoNetwork,
 } from "./types";
 
 require("dotenv").config();
@@ -127,7 +127,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBaseNetwork.base]: true,
   [eMerlinNetwork.main]: true,
   [eMerlinNetwork.mainInn]: true,
-  [eMerlinNetwork.testnet]: true,
+  // [eMerlinNetwork.testnet]: true,
   [eBevmNetwork.main]: true,
   [eBevmNetwork.testnet]: true,
   [eBitlayerNetwork.main]: true,
@@ -144,7 +144,7 @@ const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eMerlinNetwork.main]: 60000001,
   [eMerlinNetwork.mainInn]: 60000001,
   [eBitlayerNetwork.main]: 100000008,
-  [eBscNetwork.main]: 3000000000
+  [eBscNetwork.main]: 3000000000,
 };
 
 export const buildForkConfig = ():

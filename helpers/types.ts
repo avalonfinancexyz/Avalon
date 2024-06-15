@@ -23,7 +23,7 @@ export type eNetwork =
   | eBevmNetwork
   | eBitlayerNetwork
   | eBscNetwork
-  | eCoredaoNetwork ;
+  | eCoredaoNetwork;
 
 type eTenderlyNetwork = "tenderly";
 
@@ -622,6 +622,7 @@ export enum AssetType {
 export enum TransferStrategy {
   PullRewardsStrategy,
   StakedRewardsStrategy,
+  EsRewardsStrategy,
 }
 
 export interface RewardsConfigInput {

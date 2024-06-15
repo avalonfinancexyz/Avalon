@@ -100,8 +100,12 @@ export const MOCK_CHAINLINK_AGGREGATORS_PRICES: { [key: string]: string } = {
   MUSDC: parseUnits("1", 8).toString(),
   MUSDT: parseUnits("1", 8).toString(),
   MORDI: parseUnits("60", 8).toString(),
+  MERL: parseUnits("0.4", 8).toString(),
+  ORDI: parseUnits("40", 8).toString(),
+  MSTONE: parseUnits("4000", 8).toString(),
   POINTS: parseUnits("1", 8).toString(),
   SOLVBTC: parseUnits("1", 8).toString(),
+  ESAVAF: parseUnits("1", 8).toString(),
 };
 
 export const chainlinkAggregatorProxy: Record<string, string> = {

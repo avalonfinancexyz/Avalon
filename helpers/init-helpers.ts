@@ -75,7 +75,6 @@ export const initReservesByHelper = async (
     poolArtifact.abi,
     await addressProvider.getPool()
   )) as any as Pool;
-  
 
   // CHUNK CONFIGURATION
   const initChunks = 3;
@@ -228,18 +227,24 @@ export const initReservesByHelper = async (
     chunkIndex < chunkedInitInputParams.length;
     chunkIndex++
   ) {
-    if (isAdmin){
+    if (isAdmin) {
       const tx = await waitForTx(
         await configurator.initReserves(chunkedInitInputParams[chunkIndex])
       );
-  
+
       console.log(
         `  - Reserve ready for: ${chunkedSymbols[chunkIndex].join(", ")}`,
         `\n    - Tx hash: ${tx.transactionHash}`
       );
     } else {
-      console.log(` - Not pool admin, executed initReserves from multisig:`, admin);
-      console.log(" - chunkedInitInputParams: ", chunkedInitInputParams[chunkIndex]);
+      console.log(
+        ` - Not pool admin, executed initReserves from multisig:`,
+        admin
+      );
+      console.log(
+        " - chunkedInitInputParams: ",
+        chunkedInitInputParams[chunkIndex]
+      );
       const calldata = configurator.interface.encodeFunctionData(
         "initReserves",
         [chunkedInitInputParams[chunkIndex]]
@@ -281,7 +286,7 @@ export const getPairsTokenAggregator = (
 export const configureReservesByHelper = async (
   reservesParams: iMultiPoolsAssets<IReserveParams>,
   tokenAddresses: { [symbol: string]: tEthereumAddress }
-) : Promise<string[]> => {
+): Promise<string[]> => {
   const { deployer } = await hre.getNamedAccounts();
   const addressProviderArtifact = await hre.deployments.get(
     POOL_ADDRESSES_PROVIDER_ID
@@ -386,6 +391,7 @@ export const configureReservesByHelper = async (
     tokens.push(tokenAddress);
     symbols.push(assetSymbol);
   }
+
   if (tokens.length) {
     // Set aTokenAndRatesDeployer as temporal admin
     const aclAdmin = await hre.ethers.getSigner(
@@ -401,10 +407,9 @@ export const configureReservesByHelper = async (
     } else {
       console.log(` - Not pool admin, executed addRiskAdmin from multisig:`);
       console.log(` - aclManager ${aclManager.address}`);
-      const calldata = aclManager.interface.encodeFunctionData(
-        "addRiskAdmin",
-        [reservesSetupHelper.address]
-      );
+      const calldata = aclManager.interface.encodeFunctionData("addRiskAdmin", [
+        reservesSetupHelper.address,
+      ]);
       console.log(" - Calldata: ", calldata);
     }
 
@@ -420,7 +425,7 @@ export const configureReservesByHelper = async (
       chunkIndex < chunkedInputParams.length;
       chunkIndex++
     ) {
-      if(isAdmin){
+      if (isAdmin) {
         const tx = await waitForTx(
           await reservesSetupHelper.configureReserves(
             poolConfiguratorAddress,
@@ -432,8 +437,14 @@ export const configureReservesByHelper = async (
           `\n    - Tx hash: ${tx.transactionHash}`
         );
       } else {
-        console.log(` - Not admin, executed configureReserves from multisig:`, aclAdmin.address);
-        console.log(" - chunkedInitInputParams: ", chunkedInputParams[chunkIndex]);
+        console.log(
+          ` - Not admin, executed configureReserves from multisig:`,
+          aclAdmin.address
+        );
+        console.log(
+          " - chunkedInitInputParams: ",
+          chunkedInputParams[chunkIndex]
+        );
         const calldata = reservesSetupHelper.interface.encodeFunctionData(
           "configureReserves",
           [poolConfiguratorAddress, chunkedInputParams[chunkIndex]]

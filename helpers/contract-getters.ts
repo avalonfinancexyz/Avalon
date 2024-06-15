@@ -62,7 +62,7 @@ import { RewardsController } from "../typechain";
 import { StakedTokenV2Rev3 } from "../typechain";
 import { Libraries } from "hardhat-deploy/dist/types";
 import { getContract } from "./utilities/tx";
-import { EMISSION_MANAGER_ID } from ".";
+import { EMISSION_MANAGER_ID, EMISSION_MANAGER_V2_ID } from ".";
 import { EmissionManager } from "../typechain";
 
 // Prevent error HH9 when importing this file inside tasks or helpers at Hardhat config load
@@ -347,6 +347,12 @@ export const getEmissionManager = async (address?: tEthereumAddress) =>
   getContract<EmissionManager>(
     "EmissionManager",
     address || (await hre.deployments.get(EMISSION_MANAGER_ID)).address
+  );
+
+export const getEmissionManagerV2 = async (address?: tEthereumAddress) =>
+  getContract<EmissionManager>(
+    "EmissionManagerV2",
+    address || (await hre.deployments.get(EMISSION_MANAGER_V2_ID)).address
   );
 
 export const getOwnableContract = async (address: string) => {
