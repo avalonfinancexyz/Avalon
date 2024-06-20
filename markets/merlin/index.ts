@@ -14,6 +14,7 @@ import {
   strategyMORDI,
   strategySOLVBTC,
   strategyMSTONE,
+  strategySOLVBTCENA,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -35,7 +36,7 @@ export const MerlinConfig: IAaveConfiguration = {
   VariableDebtTokenNamePrefix: "Avalon",
   SymbolPrefix: "Mer",
   // for testent
-  TestnetMarket: true,
+  TestnetMarket: false,
   ReservesConfig: {
     WBTC: strategyWBTC,
     MBTC: strategyMBTC,
@@ -47,6 +48,7 @@ export const MerlinConfig: IAaveConfiguration = {
     MERL: strategyMERL,
     MSTONE: strategyMSTONE,
     ORDI: strategyMORDI,
+    SOLVBTCENA: strategySOLVBTCENA,
   },
   ReserveAssets: {
     [eMerlinNetwork.main]: {
@@ -59,6 +61,7 @@ export const MerlinConfig: IAaveConfiguration = {
       MERL: "0x5c46bFF4B38dc1EAE09C5BAc65872a1D8bc87378",
       MSTONE: "0xB5d8b1e73c79483d7750C5b8DF8db45A0d24e2cf",
       ORDI: "0x7dcb50b2180BC896Da1200D2726a88AF5D2cBB5A",
+      SOLVBTCENA: "0x88c618B2396C1A11A6Aabd1bf89228a08462f2d2",
     },
     [eMerlinNetwork.testnet]: {
       WBTC: ZERO_ADDRESS,
@@ -141,6 +144,7 @@ export const MerlinConfig: IAaveConfiguration = {
       MERL: "0x7c8cacdf03f842e883bb3a09811b5d04405f8ea8",
       MSTONE: "0xDdd5DbF22A5e5140fe9964309Af4bE65D6A7c1C9",
       ORDI: "0xff7013bc8123f801957e67bde37bcab222daf181",
+      SOLVBTCENA: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
     },
     [eMerlinNetwork.testnet]: {
       WBTC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
