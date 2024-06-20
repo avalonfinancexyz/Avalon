@@ -8,6 +8,7 @@ import {
   strategyWETH,
   strategyUSDT,
   strategySOLVBTC,
+  strategySOLVBTCENA,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -31,6 +32,7 @@ export const ArbitrumConfig: IAaveConfiguration = {
     WETH: strategyWETH,
     USDT: strategyUSDT,
     SOLVBTC: strategySOLVBTC,
+    SOLVBTCENA: strategySOLVBTCENA,
   },
   ReserveAssets: {
     [eArbitrumNetwork.arbitrum]: {
@@ -40,6 +42,7 @@ export const ArbitrumConfig: IAaveConfiguration = {
       WETH: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
       USDT: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       SOLVBTC: "0x3647c54c4c2C65bC7a2D63c0Da2809B399DBBDC0",
+      SOLVBTCENA: "0xaFAfd68AFe3fe65d376eEC9Eab1802616cFacCb8",
     },
     [eArbitrumNetwork.arbitrumTestnet]: {
       DAI: ZERO_ADDRESS,
@@ -65,6 +68,7 @@ export const ArbitrumConfig: IAaveConfiguration = {
       WETH: "0x639Fe6ab55C921f74e7fac1ee960C0B6293ba612",
       USDT: "0x3f3f5dF88dC9F13eac63DF89EC16ef6e7E25DdE7",
       SOLVBTC: "0x6ce185860a4963106506C203335A2910413708e9",
+      SOLVBTCENA: "0x6ce185860a4963106506C203335A2910413708e9",
     },
   },
   RateStrategies: {
