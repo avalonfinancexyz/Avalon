@@ -7,6 +7,7 @@ import {
   rateStrategyStableThree,
   rateStrategyVolatileThree,
   rateStrategyVolatileBTCOne,
+  rateStrategyVolatileBTCTwo,
 } from "./rateStrategies";
 
 export const strategyWBNB: IReserveParams = {
@@ -82,7 +83,7 @@ export const strategyUSDT: IReserveParams = {
 };
 
 export const strategySOLVBTC: IReserveParams = {
-  strategy: rateStrategyVolatileBTCOne,
+  strategy: rateStrategyVolatileBTCTwo,
   baseLTVAsCollateral: "4000",
   liquidationThreshold: "7500",
   liquidationBonus: "12000",
@@ -92,7 +93,7 @@ export const strategySOLVBTC: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "1500",
   supplyCap: "0",
   borrowCap: "0",
   debtCeiling: "0",

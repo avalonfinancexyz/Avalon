@@ -57,10 +57,13 @@ task(`review-rate-strategies`, ``)
 
       for (let index = 0; index < reservesToCheck.length; index++) {
         let { symbol, tokenAddress } = reservesToCheck[index];
-        
-        const normalizedSymbol = normalizedSymbols.find((s) =>
+
+        let normalizedSymbol = normalizedSymbols.find((s) =>
           symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
         );
+        if (symbol.includes(".ENA")) {
+          normalizedSymbol = `${normalizedSymbol}ENA`;
+        }
         if (!normalizedSymbol) {
           console.error(
             `- Missing address ${tokenAddress} at ReserveAssets configuration.`
@@ -166,7 +169,7 @@ task(`review-rate-strategies`, ``)
             );
             if (fix) {
               const isAdmin = admin == deployer;
-              if(isAdmin){
+              if (isAdmin) {
                 await waitForTx(
                   await poolConfigurator.setReserveInterestRateStrategyAddress(
                     tokenAddress,
@@ -180,10 +183,13 @@ task(`review-rate-strategies`, ``)
                   fixedInterestStrategy.address
                 );
               } else {
-                console.log(` - Not pool admin, executed setReserveInterestRateStrategyAddress from multisig:`, admin);
+                console.log(
+                  ` - Not pool admin, executed setReserveInterestRateStrategyAddress from multisig:`,
+                  admin
+                );
                 const calldata = poolConfigurator.interface.encodeFunctionData(
                   "setReserveInterestRateStrategyAddress",
-                  [tokenAddress,fixedInterestStrategy.address]
+                  [tokenAddress, fixedInterestStrategy.address]
                 );
                 console.log(" - poolConfigurator: ", poolConfigurator.address);
                 console.log(" - Calldata: ", calldata);

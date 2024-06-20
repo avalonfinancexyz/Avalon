@@ -1,13 +1,9 @@
 import { task } from "hardhat/config";
 import { BigNumberish } from "ethers";
-import {
-  eNetwork,
-  loadPoolConfig,
-} from "../../helpers";
+import { eNetwork, loadPoolConfig } from "../../helpers";
 import {
   getPoolAddressesProvider,
   getPoolConfiguratorProxy,
-  
 } from "../../helpers/contract-getters";
 import { IInterestRateStrategyParams } from "../../helpers/types";
 import { getAaveProtocolDataProvider } from "../../helpers/contract-getters";
@@ -22,13 +18,7 @@ task(`update-reserve-factor`, `update reserve factor`)
   .addFlag("fix")
   .addOptionalParam("checkOnly")
   .setAction(
-    async (
-      {
-        fix,
-        checkOnly,
-      }: { fix: boolean; checkOnly: string; }, 
-      hre
-    ) => {
+    async ({ fix, checkOnly }: { fix: boolean; checkOnly: string }, hre) => {
       const network = (
         process.env.FORK ? process.env.FORK : hre.network.name
       ) as eNetwork;
@@ -53,10 +43,14 @@ task(`update-reserve-factor`, `update reserve factor`)
 
       for (let index = 0; index < reservesToCheck.length; index++) {
         let { symbol, tokenAddress } = reservesToCheck[index];
-        
-        const normalizedSymbol = normalizedSymbols.find((s) =>
+
+        let normalizedSymbol = normalizedSymbols.find((s) =>
           symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
         );
+
+        if (symbol.includes(".ENA")) {
+          normalizedSymbol = `${normalizedSymbol}ENA`;
+        }
         if (!normalizedSymbol) {
           console.error(
             `- Missing address ${tokenAddress} at ReserveAssets configuration.`
@@ -71,8 +65,9 @@ task(`update-reserve-factor`, `update reserve factor`)
           normalizedSymbol
         );
         const expectedFactor: BigNumberish =
-          poolConfig.ReservesConfig[normalizedSymbol.toUpperCase()].reserveFactor;
-          
+          poolConfig.ReservesConfig[normalizedSymbol.toUpperCase()]
+            .reserveFactor;
+
         let { reserveFactor: currentFactor } =
           await dataProvider.getReserveConfigurationData(tokenAddress);
 
@@ -80,9 +75,7 @@ task(`update-reserve-factor`, `update reserve factor`)
         const delta = diff(expectedFactor, normalizedFactor);
         if (delta) {
           console.log(
-            `- Found ${chalk.red(
-              "differences"
-            )} at reserve ${normalizedSymbol}`
+            `- Found ${chalk.red("differences")} at reserve ${normalizedSymbol}`
           );
           console.log(
             chalk.red(
@@ -98,7 +91,7 @@ task(`update-reserve-factor`, `update reserve factor`)
               await poolAddressesProvider.getACLAdmin()
             );
             const isAdmin = aclAdmin.address == deployer;
-            if(isAdmin){
+            if (isAdmin) {
               console.log("  - Update a new factor of asset");
               await waitForTx(
                 await poolConfigurator.setReserveFactor(
@@ -113,7 +106,10 @@ task(`update-reserve-factor`, `update reserve factor`)
                 expectedFactor
               );
             } else {
-              console.log(` - Not admin, executed setReserveFactor from multisig:`, aclAdmin.address);
+              console.log(
+                ` - Not admin, executed setReserveFactor from multisig:`,
+                aclAdmin.address
+              );
               const calldata = poolConfigurator.interface.encodeFunctionData(
                 "setReserveFactor",
                 [tokenAddress, expectedFactor]
