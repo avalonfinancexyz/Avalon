@@ -11,6 +11,7 @@ import {
   strategyUSDC,
   strategyUSDT,
   strategySOLVBTC,
+  strategySOLVBTCENA,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -18,7 +19,7 @@ import {
   rateStrategyStableTwo,
   rateStrategyVolatileTwo,
   rateStrategyStableThree,
-  rateStrategyVolatileThree
+  rateStrategyVolatileThree,
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 
@@ -34,11 +35,12 @@ export const CoredaoConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    WCORE: strategyWCORE,
-    COREBTC: strategyCOREBTC,
-    USDC: strategyUSDC,
-    USDT: strategyUSDT,
-    SOLVBTC: strategySOLVBTC,
+    // WCORE: strategyWCORE,
+    // COREBTC: strategyCOREBTC,
+    // USDC: strategyUSDC,
+    // USDT: strategyUSDT,
+    // SOLVBTC: strategySOLVBTC,
+    SOLVBTCENA: strategySOLVBTCENA,
   },
   ReserveAssets: {
     [eCoredaoNetwork.main]: {
@@ -47,6 +49,7 @@ export const CoredaoConfig: IAaveConfiguration = {
       USDC: "0xa4151b2b3e269645181dccf2d426ce75fcbdeca9",
       USDT: "0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1",
       SOLVBTC: "0x5B1Fb849f1F76217246B8AAAC053b5C7b15b7dc3",
+      SOLVBTCENA: "0xe04d21d999FaEDf1e72AdE6629e20A11a1ed14FA",
     },
     [eCoredaoNetwork.testnet]: {
       WCORE: "0x0000000000000000000000000000000000000000",
@@ -88,6 +91,7 @@ export const CoredaoConfig: IAaveConfiguration = {
       USDC: "0x6361b75086d28c45bc5b5529cdfcc71a3b3b54c4",
       USDT: "0x2efb68fa0c4fc0a16537ff0af09d86005c267946",
       SOLVBTC: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
+      SOLVBTCENA: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
     },
     [eCoredaoNetwork.testnet]: {
       WCORE: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
@@ -99,7 +103,7 @@ export const CoredaoConfig: IAaveConfiguration = {
     rateStrategyStableTwo,
     rateStrategyVolatileTwo,
     rateStrategyStableThree,
-    rateStrategyVolatileThree
+    rateStrategyVolatileThree,
   },
 };
 
