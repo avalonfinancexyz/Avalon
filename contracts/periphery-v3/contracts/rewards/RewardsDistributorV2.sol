@@ -159,7 +159,41 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
         if (userAssetBalances[i].userBalance == 0) {
           continue;
         }
-        unclaimedAmounts[r] += _getPendingRewards(user, rewardsList[r], userAssetBalances[i]);
+        unclaimedAmounts[r] += _getPendingRewards(user, rewardsList[r], true, userAssetBalances[i]);
+      }
+    }
+    return (rewardsList, unclaimedAmounts);
+  }
+
+  /// Get the base reward without boost
+  function getAllUserRewardsWithoutBoost(
+    address[] calldata assets,
+    address user
+  )
+    external
+    view
+    returns (address[] memory rewardsList, uint256[] memory unclaimedAmounts)
+  {
+    RewardsDataTypes.UserAssetBalance[] memory userAssetBalances = _getUserAssetBalances(
+      assets,
+      user
+    );
+    rewardsList = new address[](_rewardsList.length);
+    unclaimedAmounts = new uint256[](rewardsList.length);
+
+    // Add unrealized rewards from user to unclaimedRewards
+    for (uint256 i = 0; i < userAssetBalances.length; i++) {
+      for (uint256 r = 0; r < rewardsList.length; r++) {
+        rewardsList[r] = _rewardsList[r];
+        unclaimedAmounts[r] += _assets[userAssetBalances[i].asset]
+          .rewards[rewardsList[r]]
+          .usersData[user]
+          .accrued;
+
+        if (userAssetBalances[i].userBalance == 0) {
+          continue;
+        }
+        unclaimedAmounts[r] += _getPendingRewards(user, rewardsList[r], false, userAssetBalances[i]);
       }
     }
     return (rewardsList, unclaimedAmounts);
@@ -346,7 +380,8 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
           userBalance,
           newAssetIndex,
           userIndex,
-          assetUnit
+          assetUnit,
+          true
         );
 
         rewardData.usersData[user].accrued += rewardsAccrued.toUint128();
@@ -444,7 +479,7 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
           .accrued;
       } else {
         unclaimedRewards +=
-          _getPendingRewards(user, reward, userAssetBalances[i]) +
+          _getPendingRewards(user, reward, true, userAssetBalances[i]) +
           _assets[userAssetBalances[i].asset].rewards[reward].usersData[user].accrued;
       }
     }
@@ -457,11 +492,13 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
    * @param user The address of the user
    * @param reward The address of the reward token
    * @param userAssetBalance struct with the user balance and total supply of the incentivized asset
+   * @param isBoost Whether to enable boost
    * @return The pending rewards for the user since the last user action
    **/
   function _getPendingRewards(
     address user,
     address reward,
+    bool isBoost,
     RewardsDataTypes.UserAssetBalance memory userAssetBalance
   ) internal view returns (uint256) {
     RewardsDataTypes.RewardData storage rewardData = _assets[userAssetBalance.asset].rewards[
@@ -477,7 +514,8 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
         userAssetBalance.userBalance,
         nextIndex,
         rewardData.usersData[user].index,
-        assetUnit
+        assetUnit,
+        isBoost
       );
   }
 
@@ -489,6 +527,7 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
    * @param reserveIndex Current index of the distribution
    * @param userIndex Index stored for the user, representation his staking moment
    * @param assetUnit One unit of asset (10**decimals)
+   * @param isBoost Whether to enable boost
    * @return The rewards
    **/
   function _getRewards(
@@ -497,11 +536,12 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
     uint256 userBalance,
     uint256 reserveIndex,
     uint256 userIndex,
-    uint256 assetUnit
+    uint256 assetUnit,
+    bool isBoost
   ) internal view returns (uint256) {
     uint256 result = userBalance * (reserveIndex - userIndex);
     if(_boostConfig!=address(0)){
-        result += _calcBoosted(user, totalSupply, userBalance, result);
+        result += _calcBoosted(user, totalSupply, userBalance, result, isBoost);
     }
     assembly {
       result := div(result, assetUnit)
@@ -516,14 +556,16 @@ abstract contract RewardsDistributorV2 is IRewardsDistributorV2 {
    * @param totalSupply of the asset being rewarded
    * @param userBalance Balance of the user asset on a distribution
    * @param baseRewards The base rewards amount
+   * @param isBoost Whether to enable boost
    **/
   function _calcBoosted(
     address user,
     uint256 totalSupply,
     uint256 userBalance,
-    uint256 baseRewards
+    uint256 baseRewards,
+    bool isBoost
   ) internal view returns (uint256) {
-    if(_boostConfig == address(0)){
+    if(_boostConfig == address(0) || !isBoost){
        return 0;
     }
     uint256 boostRate = IBoostConfig(_boostConfig).getBoostRate(user) * totalSupply / userBalance ;
