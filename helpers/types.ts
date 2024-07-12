@@ -93,6 +93,7 @@ export enum eBevmNetwork {
 
 export enum eBitlayerNetwork {
   main = "bitlayer",
+  mainLsd = "bitlayer-lsd",
   testnet = "bitlayer-testnet",
 }
 

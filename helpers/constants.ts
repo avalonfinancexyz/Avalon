@@ -57,6 +57,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eBevmNetwork.main]: "0xB5136FEba197f5fF4B765E5b50c74db717796dcD",
   [eBevmNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
   [eBitlayerNetwork.main]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
+  [eBitlayerNetwork.mainLsd]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
   [eBitlayerNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
 
   [eBscNetwork.main]: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
@@ -138,7 +139,8 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   [eBevmNetwork.main]: "0xaaF640C5a9Ad6027461b404c32e153591a0B533B",
   [eBevmNetwork.testnet]: "0xaaF640C5a9Ad6027461b404c32e153591a0B533B",
 
-  [eBitlayerNetwork.main]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
+  [eBitlayerNetwork.main]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+  [eBitlayerNetwork.mainLsd]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
 
   [eBscNetwork.main]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
@@ -178,7 +180,8 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   [eBevmNetwork.main]: "0xaaF640C5a9Ad6027461b404c32e153591a0B533B",
   [eBevmNetwork.testnet]: "0xaaF640C5a9Ad6027461b404c32e153591a0B533B",
 
-  [eBitlayerNetwork.main]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
+  [eBitlayerNetwork.main]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+  [eBitlayerNetwork.mainLsd]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
 
   [eBscNetwork.main]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
@@ -195,7 +198,7 @@ export const EMPTY_STORAGE_SLOT =
   "0x0000000000000000000000000000000000000000000000000000000000000000";
 
 export const POOL_ADMIN: Record<string, string> = {
-  [eArbitrumNetwork.arbitrum]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eArbitrumNetwork.arbitrum]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
   [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
@@ -213,6 +216,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eBevmNetwork.testnet]: "0x513454B3E4A4c9E77740a496A673B36967139269",
 
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
+  [eBitlayerNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
   [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
@@ -223,7 +227,7 @@ export const POOL_ADMIN: Record<string, string> = {
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
-  [eArbitrumNetwork.arbitrum]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eArbitrumNetwork.arbitrum]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
   [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
@@ -238,6 +242,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eBevmNetwork.testnet]: "0x513454B3E4A4c9E77740a496A673B36967139269",
 
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
+  [eBitlayerNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
   [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
@@ -284,7 +289,7 @@ export const GOVERNANCE_BRIDGE_EXECUTOR: { [key: string]: string } = {
 };
 
 export const MULTISIG_ADDRESS: { [key: string]: string } = {
-  [eArbitrumNetwork.arbitrum]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eArbitrumNetwork.arbitrum]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
   [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
@@ -300,6 +305,7 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
   [eBevmNetwork.testnet]: "0x513454B3E4A4c9E77740a496A673B36967139269",
 
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
+  [eBitlayerNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
   [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",

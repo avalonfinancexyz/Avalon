@@ -147,24 +147,19 @@ export default {
       eBitlayerNetwork.main,
       200901
     ),
+    [eBitlayerNetwork.mainLsd]: getCommonNetworkConfig(
+      eBitlayerNetwork.mainLsd,
+      200901
+    ),
     [eBitlayerNetwork.testnet]: getCommonNetworkConfig(
       eBitlayerNetwork.testnet,
       200810
     ),
 
-    [eBscNetwork.main]: getCommonNetworkConfig(
-      eBscNetwork.main,
-      56
-    ),
-    [eBscNetwork.testnet]: getCommonNetworkConfig(
-      eBscNetwork.testnet,
-      97
-    ),
+    [eBscNetwork.main]: getCommonNetworkConfig(eBscNetwork.main, 56),
+    [eBscNetwork.testnet]: getCommonNetworkConfig(eBscNetwork.testnet, 97),
 
-    [eCoredaoNetwork.main]: getCommonNetworkConfig(
-      eCoredaoNetwork.main,
-      1116
-    ),
+    [eCoredaoNetwork.main]: getCommonNetworkConfig(eCoredaoNetwork.main, 1116),
     [eCoredaoNetwork.testnet]: getCommonNetworkConfig(
       eCoredaoNetwork.testnet,
       1115
@@ -294,6 +289,14 @@ export default {
       },
       {
         network: eBitlayerNetwork.main,
+        chainId: 200901,
+        urls: {
+          apiURL: "https://api.btrscan.com/scan/api",
+          browserURL: "https://www.btrscan.com/",
+        },
+      },
+      {
+        network: eBitlayerNetwork.mainLsd,
         chainId: 200901,
         urls: {
           apiURL: "https://api.btrscan.com/scan/api",

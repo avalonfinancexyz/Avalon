@@ -109,6 +109,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBevmNetwork.main]: `https://rpc-mainnet-1.bevm.io`,
   [eBevmNetwork.testnet]: `https://rpc-canary-1.bevm.io`,
   [eBitlayerNetwork.main]: `https://rpc.bitlayer-rpc.com`,
+  [eBitlayerNetwork.mainLsd]: `https://rpc.bitlayer-rpc.com`,
   [eBitlayerNetwork.testnet]: `https://testnet-rpc.bitlayer-rpc.com`,
   [eBscNetwork.main]: `https://bsc-dataseed1.defibit.io`,
   [eBscNetwork.testnet]: `https://bsc-testnet.blockpi.network/v1/rpc/public`,
@@ -131,6 +132,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBevmNetwork.main]: true,
   [eBevmNetwork.testnet]: true,
   [eBitlayerNetwork.main]: true,
+  [eBitlayerNetwork.mainLsd]: true,
   [eBitlayerNetwork.testnet]: true,
   [eBscNetwork.main]: true,
   [eBscNetwork.testnet]: true,
@@ -144,6 +146,7 @@ const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eMerlinNetwork.main]: 60000001,
   [eMerlinNetwork.mainInn]: 60000001,
   [eBitlayerNetwork.main]: 100000008,
+  [eBitlayerNetwork.mainLsd]: 100000008,
   [eBscNetwork.main]: 3000000000,
 };
 

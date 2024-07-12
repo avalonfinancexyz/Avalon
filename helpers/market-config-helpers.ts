@@ -46,6 +46,7 @@ import BevmConfig from "../markets/bevm";
 import BitlayerConfig from "../markets/bitlayer";
 import BscConfig from "../markets/bsc";
 import CoredaoConfig from "../markets/coredao";
+import BitlayerLSDConfig from "../markets/bitlayerLsd";
 
 declare var hre: HardhatRuntimeEnvironment;
 
@@ -66,6 +67,7 @@ export enum ConfigNames {
   MerlinInn = "MerlinInn",
   Bevm = "Bevm",
   Bitlayer = "Bitlayer",
+  BitlayerLsd = "BitlayerLsd",
   Bsc = "Bsc",
   Coredao = "Coredao",
 }
@@ -147,6 +149,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return BscConfig;
     case ConfigNames.Coredao:
       return CoredaoConfig;
+    case ConfigNames.BitlayerLsd:
+      return BitlayerLSDConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(
