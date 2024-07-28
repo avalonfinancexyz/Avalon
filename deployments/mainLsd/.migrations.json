@@ -1,0 +1,16 @@
+{
+  "PoolAddressesProviderRegistry": 1721104669,
+  "LogicLibraries": 1721104852,
+  "Treasury": 1721104946,
+  "PoolAddressesProvider:EthLSD:aave-v3-core@1.19.3": 1721105056,
+  "PoolConfigurator": 1721105137,
+  "ACLManager:EthLSD:aave-v3-core@1.19.3": 1721105251,
+  "Oracles:EthLSD:aave-v3-core@1.19.3": 1721105272,
+  "InitOracles:EthLSD:aave-v3-core@1.19.3": 1721105298,
+  "PoolInitalization:EthLSD:aave-v3-core@1.19.3": 1721105382,
+  "Incentives:EthLSD:aave-v3-periphery@2.5.2": 1721105500,
+  "TokenImplementations:EthLSD:aave-v3-core@1.19.3": 1721105668,
+  "ReservesInit:EthLSD:aave-v3-core@1.19.3": 1721105888,
+  "PeripheryInit:EthLSD:aave-v3-periphery@2.5.2": 1721105888,
+  "IncentivesV2:EthLSD:aave-v3-periphery@2.5.2": 1721106098
+}

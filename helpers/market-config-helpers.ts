@@ -47,6 +47,7 @@ import BitlayerConfig from "../markets/bitlayer";
 import BscConfig from "../markets/bsc";
 import CoredaoConfig from "../markets/coredao";
 import BitlayerLSDConfig from "../markets/bitlayerLsd";
+import EthLSDConfig from "../markets/ethLsd";
 
 declare var hre: HardhatRuntimeEnvironment;
 
@@ -70,6 +71,7 @@ export enum ConfigNames {
   BitlayerLsd = "BitlayerLsd",
   Bsc = "Bsc",
   Coredao = "Coredao",
+  ETHLSD = "EthLSD",
 }
 
 export const getParamPerNetwork = <T>(
@@ -151,6 +153,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return CoredaoConfig;
     case ConfigNames.BitlayerLsd:
       return BitlayerLSDConfig;
+    case ConfigNames.ETHLSD:
+      return EthLSDConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(

@@ -65,6 +65,9 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
 
   [eCoredaoNetwork.main]: "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
   [eCoredaoNetwork.testnet]: "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
+
+  // LSD
+  [eEthereumNetwork.mainLsd]: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
 };
 
 export const ZERO_BYTES_32 =
@@ -148,6 +151,9 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
 
   [eCoredaoNetwork.main]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
   [eCoredaoNetwork.testnet]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
+
+  // LSD
+  [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
 };
 
 export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
@@ -189,6 +195,9 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
 
   [eCoredaoNetwork.main]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
   [eCoredaoNetwork.testnet]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
+
+  // LSD
+  [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
 };
 
 export const ETHEREUM_SHORT_EXECUTOR =
@@ -224,6 +233,8 @@ export const POOL_ADMIN: Record<string, string> = {
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
@@ -250,6 +261,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
 export const DEFAULT_NAMED_ACCOUNTS = {
@@ -313,6 +325,9 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  // LSD
+  [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
 export const INCENTIVES_REWARDS_VAULT: { [key: string]: string } = {

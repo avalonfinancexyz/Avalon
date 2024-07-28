@@ -164,6 +164,10 @@ export default {
       eCoredaoNetwork.testnet,
       1115
     ),
+    [eEthereumNetwork.mainLsd]: getCommonNetworkConfig(
+      eEthereumNetwork.mainLsd,
+      1
+    ),
   },
   namedAccounts: {
     ...DEFAULT_NAMED_ACCOUNTS,

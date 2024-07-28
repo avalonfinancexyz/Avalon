@@ -135,3 +135,21 @@ export const strategySOLVBTCENA: IReserveParams = {
   debtCeiling: "0",
   borrowableIsolation: false,
 };
+
+export const strategySOLVBTCBBN: IReserveParams = {
+  strategy: rateStrategyVolatileBTCOne,
+  baseLTVAsCollateral: "5000",
+  liquidationThreshold: "7500",
+  liquidationBonus: "12000",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: true,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};

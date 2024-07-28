@@ -19,6 +19,7 @@ import {
   strategyWBTCSLP,
   strategyMBTCSLP,
   strategyDOG,
+  strategyMERL,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -54,6 +55,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
     WBTCSLP: strategyWBTCSLP,
     MBTCSLP: strategyMBTCSLP,
     DOG: strategyDOG,
+    MERL: strategyMERL,
   },
   ReserveAssets: {
     [eMerlinNetwork.mainInn]: {
@@ -71,6 +73,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
       WBTCSLP: "0xb00db5fAAe7682d80cA3CE5019E710ca08Bfbd66",
       MBTCSLP: "0xa41a8C64a324cD00CB70C2448697E248EA0b1ff2",
       DOG: "0x32A4b8b10222F85301874837F27F4c416117B811",
+      MERL: "0x5c46bFF4B38dc1EAE09C5BAc65872a1D8bc87378",
     },
     [eMerlinNetwork.testnet]: {
       MBTC: "0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF",
@@ -114,8 +117,8 @@ export const MerlinInnConfig: IAaveConfiguration = {
       MBTC: "0x4454dd04f16Bb78dc57fEb9885eAeFB3868e61b7",
       VOYA: "0x87727eEc90e4a5881e6a99E8681f1698EA0F7B27",
       HUHU: "0x6956ecB50a527c179f8Ba4dC8469c1115B55d794",
-      MSATS: "0x423b335E8B0fA8AF2f299E5173caB8e6db109d43",
-      MRATS: "0x0bBd85CdC47a58e63F2AC0Cd71082388A3fcB809",
+      MSATS: "0xB63334B22C9CcDc5e62ee80ed594d1bE89774947",
+      MRATS: "0x073283e6eA77D27Da258446c58931aC228F50feA",
       MP: "0xBeA1Fd4ae06AC3041a23114BDb28488a8bbf4183",
       esMP: "0xBeA1Fd4ae06AC3041a23114BDb28488a8bbf4183",
       MNER: "0xcA2Da6D2c91a472b49fe10a672E2324912e582c0",
@@ -125,6 +128,7 @@ export const MerlinInnConfig: IAaveConfiguration = {
       WBTCSLP: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
       MBTCSLP: "0x4454dd04f16Bb78dc57fEb9885eAeFB3868e61b7",
       DOG: "0xa24608f95b28a4f6107d8c4f12d1297dfef73b47",
+      MERL: "0xA9266eC9E518704901DD428F66E63550FDFb5751",
     },
     [eMerlinNetwork.testnet]: {},
   },

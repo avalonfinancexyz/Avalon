@@ -35,11 +35,11 @@ export const CoredaoConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    // WCORE: strategyWCORE,
-    // COREBTC: strategyCOREBTC,
-    // USDC: strategyUSDC,
-    // USDT: strategyUSDT,
-    // SOLVBTC: strategySOLVBTC,
+    WCORE: strategyWCORE,
+    COREBTC: strategyCOREBTC,
+    USDC: strategyUSDC,
+    USDT: strategyUSDT,
+    SOLVBTC: strategySOLVBTC,
     SOLVBTCENA: strategySOLVBTCENA,
   },
   ReserveAssets: {
@@ -87,11 +87,11 @@ export const CoredaoConfig: IAaveConfiguration = {
   ChainlinkAggregator: {
     [eCoredaoNetwork.main]: {
       WCORE: "0x6b0e702586c6091af8da8ab64710916f0a58b72f",
-      COREBTC: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
-      USDC: "0x6361b75086d28c45bc5b5529cdfcc71a3b3b54c4",
-      USDT: "0x2efb68fa0c4fc0a16537ff0af09d86005c267946",
-      SOLVBTC: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
-      SOLVBTCENA: "0x167bf0f73b7606eb5f5ebde59a30a0a25828837c",
+      COREBTC: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
+      USDC: "0x4aF9fAFbb7fEe76655F2D328c2f9b9a5BD49a4d9",
+      USDT: "0x992388eeEc9F2b0e44059113f2c84e5dA44293db",
+      SOLVBTC: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
+      SOLVBTCENA: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
     },
     [eCoredaoNetwork.testnet]: {
       WCORE: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",

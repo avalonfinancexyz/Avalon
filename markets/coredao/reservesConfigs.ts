@@ -100,11 +100,11 @@ export const strategySOLVBTC: IReserveParams = {
 
 export const strategySOLVBTCENA: IReserveParams = {
   strategy: rateStrategyVolatileThree,
-  baseLTVAsCollateral: "0",
-  liquidationThreshold: "0",
-  liquidationBonus: "0",
+  baseLTVAsCollateral: "5000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "11500",
   liquidationProtocolFee: "1000",
-  borrowingEnabled: false,
+  borrowingEnabled: true,
   stableBorrowRateEnabled: false,
   flashLoanEnabled: false,
   reserveDecimals: "18",

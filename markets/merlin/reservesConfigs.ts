@@ -21,7 +21,7 @@ export const strategyMBTC: IReserveParams = {
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
   supplyCap: "0",
-  borrowCap: "60",
+  borrowCap: "200",
   debtCeiling: "0",
   borrowableIsolation: false,
 };
@@ -154,7 +154,7 @@ export const strategyMORDI: IReserveParams = {
 
 export const strategySOLVBTC: IReserveParams = {
   strategy: rateStrategyVolatileBTC,
-  baseLTVAsCollateral: "5000",
+  baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "11500",
   liquidationProtocolFee: "1000",
@@ -208,16 +208,34 @@ export const strategyMSTONE: IReserveParams = {
 
 export const strategySOLVBTCENA: IReserveParams = {
   strategy: rateStrategyVolatileBTC,
-  baseLTVAsCollateral: "0",
-  liquidationThreshold: "0",
-  liquidationBonus: "0",
+  baseLTVAsCollateral: "7000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "11500",
   liquidationProtocolFee: "1000",
-  borrowingEnabled: false,
+  borrowingEnabled: true,
   stableBorrowRateEnabled: false,
-  flashLoanEnabled: false,
+  flashLoanEnabled: true,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "300",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategySOLVBTCBBN: IReserveParams = {
+  strategy: rateStrategyVolatileBTC,
+  baseLTVAsCollateral: "7000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "12000",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: true,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: true,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "0",
   supplyCap: "0",
   borrowCap: "0",
   debtCeiling: "0",

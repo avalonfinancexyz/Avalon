@@ -63,6 +63,8 @@ task(`review-rate-strategies`, ``)
         );
         if (symbol.includes(".ENA")) {
           normalizedSymbol = `${normalizedSymbol}ENA`;
+        } else if (symbol.includes(".BBN")) {
+          normalizedSymbol = `${normalizedSymbol}BBN`;
         }
         if (!normalizedSymbol) {
           console.error(

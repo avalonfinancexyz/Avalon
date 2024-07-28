@@ -9,6 +9,7 @@ import {
   strategyUSDT,
   strategySOLVBTC,
   strategySOLVBTCENA,
+  strategySOLVBTCBBN,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -33,6 +34,7 @@ export const ArbitrumConfig: IAaveConfiguration = {
     USDT: strategyUSDT,
     SOLVBTC: strategySOLVBTC,
     SOLVBTCENA: strategySOLVBTCENA,
+    SOLVBTCBBN: strategySOLVBTCBBN,
   },
   ReserveAssets: {
     [eArbitrumNetwork.arbitrum]: {
@@ -43,6 +45,7 @@ export const ArbitrumConfig: IAaveConfiguration = {
       USDT: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       SOLVBTC: "0x3647c54c4c2C65bC7a2D63c0Da2809B399DBBDC0",
       SOLVBTCENA: "0xaFAfd68AFe3fe65d376eEC9Eab1802616cFacCb8",
+      SOLVBTCBBN: "0x346c574c56e1a4aaa8dc88cda8f7eb12b39947ab",
     },
     [eArbitrumNetwork.arbitrumTestnet]: {
       DAI: ZERO_ADDRESS,
@@ -69,6 +72,7 @@ export const ArbitrumConfig: IAaveConfiguration = {
       USDT: "0xa4886beb14e27bc6de4a504eb43e1a7b20961fa4",
       SOLVBTC: "0xe5b89f1e56045ae92518f4130947583608e2e163",
       SOLVBTCENA: "0xe5b89f1e56045ae92518f4130947583608e2e163",
+      SOLVBTCBBN: "0xe5b89f1e56045ae92518f4130947583608e2e163",
     },
   },
   RateStrategies: {

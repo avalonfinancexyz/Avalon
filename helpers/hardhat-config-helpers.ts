@@ -115,6 +115,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBscNetwork.testnet]: `https://bsc-testnet.blockpi.network/v1/rpc/public`,
   [eCoredaoNetwork.main]: `https://rpc.coredao.org`,
   [eCoredaoNetwork.testnet]: `https://rpc.test.btcs.network`,
+  [eEthereumNetwork.mainLsd]: `https://eth.meowrpc.com`,
 };
 
 export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
@@ -138,6 +139,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBscNetwork.testnet]: true,
   [eCoredaoNetwork.main]: true,
   [eCoredaoNetwork.testnet]: true,
+  [eEthereumNetwork.mainLsd]: true,
 };
 
 const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {

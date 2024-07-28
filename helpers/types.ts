@@ -48,6 +48,7 @@ export enum eEthereumNetwork {
   rinkeby = "rinkeby",
   goerli = "goerli",
   sepolia = "sepolia",
+  mainLsd = "mainLsd",
 }
 
 export enum eBaseNetwork {

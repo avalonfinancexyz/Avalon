@@ -15,6 +15,7 @@ import {
   strategySOLVBTC,
   strategyMSTONE,
   strategySOLVBTCENA,
+  strategySOLVBTCBBN,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -49,6 +50,7 @@ export const MerlinConfig: IAaveConfiguration = {
     MSTONE: strategyMSTONE,
     ORDI: strategyMORDI,
     SOLVBTCENA: strategySOLVBTCENA,
+    SOLVBTCBBN: strategySOLVBTCBBN,
   },
   ReserveAssets: {
     [eMerlinNetwork.main]: {
@@ -62,6 +64,7 @@ export const MerlinConfig: IAaveConfiguration = {
       MSTONE: "0xB5d8b1e73c79483d7750C5b8DF8db45A0d24e2cf",
       ORDI: "0x7dcb50b2180BC896Da1200D2726a88AF5D2cBB5A",
       SOLVBTCENA: "0x88c618B2396C1A11A6Aabd1bf89228a08462f2d2",
+      SOLVBTCBBN: "0x1760900aca15b90fa2eca70ce4b4ec441c2cf6c5",
     },
     [eMerlinNetwork.testnet]: {
       WBTC: ZERO_ADDRESS,
@@ -135,16 +138,17 @@ export const MerlinConfig: IAaveConfiguration = {
   EModes: {},
   ChainlinkAggregator: {
     [eMerlinNetwork.main]: {
-      WBTC: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
-      MBTC: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
-      MUSDT: "0xb968194fb0dcd029b4ac14834cc623270b6a56d1",
-      MUSDC: "0x821c3f40841b75f8849016de58a6939cab685ef4",
-      MORDI: "0xff7013bc8123f801957e67bde37bcab222daf181",
-      SOLVBTC: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
-      MERL: "0x7c8cacdf03f842e883bb3a09811b5d04405f8ea8",
-      MSTONE: "0xDdd5DbF22A5e5140fe9964309Af4bE65D6A7c1C9",
-      ORDI: "0xff7013bc8123f801957e67bde37bcab222daf181",
-      SOLVBTCENA: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
+      WBTC: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+      MBTC: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+      MUSDT: "0x6C62446A0567176ddfA3FAB1269ce53773E32c64",
+      MUSDC: "0x1D9494656465bEc3F6b51e14Eb6bd60EfD01EAa2",
+      MORDI: "0xD585A8905b7596bB24D97B42B4C0d2fF64c5B9d7",
+      SOLVBTC: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+      MERL: "0xA9266eC9E518704901DD428F66E63550FDFb5751",
+      MSTONE: "0x59958f15a738806f90e5a0101BE489bA0BBc2aa1",
+      ORDI: "0xD585A8905b7596bB24D97B42B4C0d2fF64c5B9d7",
+      SOLVBTCENA: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+      SOLVBTCBBN: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
     },
     [eMerlinNetwork.testnet]: {
       WBTC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",
