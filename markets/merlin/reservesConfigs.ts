@@ -163,7 +163,7 @@ export const strategySOLVBTC: IReserveParams = {
   flashLoanEnabled: true,
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
-  reserveFactor: "3000",
+  reserveFactor: "4000",
   supplyCap: "0",
   borrowCap: "300",
   debtCeiling: "0",

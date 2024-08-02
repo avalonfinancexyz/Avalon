@@ -17,6 +17,7 @@ import {
   eBitlayerNetwork,
   eBscNetwork,
   eCoredaoNetwork,
+  eBOBNetwork,
 } from "./types";
 
 require("dotenv").config();
@@ -115,6 +116,8 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBscNetwork.testnet]: `https://bsc-testnet.blockpi.network/v1/rpc/public`,
   [eCoredaoNetwork.main]: `https://rpc.coredao.org`,
   [eCoredaoNetwork.testnet]: `https://rpc.test.btcs.network`,
+  [eBOBNetwork.main]: `https://rpc.gobob.xyz/`,
+  [eBOBNetwork.testnet]: `https://testnet.rpc.gobob.xyz/`,
   [eEthereumNetwork.mainLsd]: `https://eth.meowrpc.com`,
 };
 
@@ -139,6 +142,8 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBscNetwork.testnet]: true,
   [eCoredaoNetwork.main]: true,
   [eCoredaoNetwork.testnet]: true,
+  [eBOBNetwork.main]: true,
+  [eBOBNetwork.testnet]: true,
   [eEthereumNetwork.mainLsd]: true,
 };
 
@@ -150,6 +155,7 @@ const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eBitlayerNetwork.main]: 100000008,
   [eBitlayerNetwork.mainLsd]: 100000008,
   [eBscNetwork.main]: 3000000000,
+  [eBOBNetwork.main]: 10000,
 };
 
 export const buildForkConfig = ():

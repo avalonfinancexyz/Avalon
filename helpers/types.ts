@@ -23,7 +23,8 @@ export type eNetwork =
   | eBevmNetwork
   | eBitlayerNetwork
   | eBscNetwork
-  | eCoredaoNetwork;
+  | eCoredaoNetwork
+  | eBOBNetwork;
 
 type eTenderlyNetwork = "tenderly";
 
@@ -106,6 +107,11 @@ export enum eBscNetwork {
 export enum eCoredaoNetwork {
   main = "coredao",
   testnet = "coredao-testnet",
+}
+
+export enum eBOBNetwork {
+  main = "BOB",
+  testnet = "BOB-testnet",
 }
 
 export enum EthereumNetworkNames {

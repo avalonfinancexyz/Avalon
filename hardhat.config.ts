@@ -20,6 +20,7 @@ import {
   eBitlayerNetwork,
   eBscNetwork,
   eCoredaoNetwork,
+  eBOBNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -168,6 +169,11 @@ export default {
       eEthereumNetwork.mainLsd,
       1
     ),
+
+    [eBOBNetwork.main]: {
+      minGasPrice: 1_000_000,
+      ...getCommonNetworkConfig(eBOBNetwork.main, 60808),
+    },
   },
   namedAccounts: {
     ...DEFAULT_NAMED_ACCOUNTS,
