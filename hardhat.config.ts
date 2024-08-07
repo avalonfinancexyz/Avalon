@@ -21,6 +21,7 @@ import {
   eBscNetwork,
   eCoredaoNetwork,
   eBOBNetwork,
+  eKlaytnNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -174,6 +175,10 @@ export default {
       minGasPrice: 1_000_000,
       ...getCommonNetworkConfig(eBOBNetwork.main, 60808),
     },
+
+    [eKlaytnNetwork.main]: {
+      ...getCommonNetworkConfig(eKlaytnNetwork.main, 8217),
+    },
   },
   namedAccounts: {
     ...DEFAULT_NAMED_ACCOUNTS,
@@ -319,6 +324,14 @@ export default {
         urls: {
           apiURL: "https://api-testnet.btrscan.com/scan/api",
           browserURL: "https://testnet.btrscan.com/",
+        },
+      },
+      {
+        network: eKlaytnNetwork.testnet,
+        chainId: 8217,
+        urls: {
+          apiURL: "https://api-cypress.klaytnscope.com/api",
+          browserURL: "https://klaytnscope.com/",
         },
       },
     ],

@@ -55,7 +55,7 @@ task(`review-stable-borrow`, ``)
         const { symbol, tokenAddress } = reservesToCheck[index];
 
         const normalizedSymbol = normalizedSymbols.find((s) =>
-          symbol.toUpperCase().includes(s.toUpperCase())
+          symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
         );
         if (!normalizedSymbol) {
           console.error(

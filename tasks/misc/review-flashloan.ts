@@ -1,8 +1,8 @@
 import { eNetwork } from "../../helpers/types";
 import { loadPoolConfig } from "../../helpers/market-config-helpers";
-import { 
-    getPoolAddressesProvider,
-    getPoolConfiguratorProxy
+import {
+  getPoolAddressesProvider,
+  getPoolConfiguratorProxy,
 } from "../../helpers/contract-getters";
 import { task } from "hardhat/config";
 import { waitForTx } from "../../helpers/utilities/tx";
@@ -56,9 +56,14 @@ task(`review-flashloan`, ``)
       for (let index = 0; index < reservesToCheck.length; index++) {
         const { symbol, tokenAddress } = reservesToCheck[index];
 
-        const normalizedSymbol = normalizedSymbols.find((s) =>
-            symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
+        let normalizedSymbol = normalizedSymbols.find((s) =>
+          symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
         );
+        if (symbol.includes(".ENA")) {
+          normalizedSymbol = `${normalizedSymbol}ENA`;
+        } else if (symbol.includes(".BBN")) {
+          normalizedSymbol = `${normalizedSymbol}BBN`;
+        }
         if (!normalizedSymbol) {
           console.error(
             `- Missing address ${tokenAddress} at ReserveAssets configuration.`
@@ -75,10 +80,9 @@ task(`review-flashloan`, ``)
         const expectedFlashloanEnabled =
           poolConfig.ReservesConfig[normalizedSymbol.toUpperCase()]
             .flashLoanEnabled;
-        const onChainFlashloanEnabled = (
-          await dataProvider.getFlashLoanEnabled(tokenAddress)
+        const onChainFlashloanEnabled = await dataProvider.getFlashLoanEnabled(
+          tokenAddress
         );
-        
 
         const delta = expectedFlashloanEnabled !== onChainFlashloanEnabled;
         if (delta) {
@@ -99,17 +103,16 @@ task(`review-flashloan`, ``)
               normalizedSymbol
             );
           const isAdmin = admin == poolAdmin;
-          if (isAdmin){
+          if (isAdmin) {
             await waitForTx(
-                await poolConfigurator.setReserveFlashLoaning(
-                  tokenAddress,
-                  expectedFlashloanEnabled
-                )
-              );
-              const newOnChainFlashloanEnabled = (
-                await dataProvider.getFlashLoanEnabled(tokenAddress)
-              );
-              vvv &&
+              await poolConfigurator.setReserveFlashLoaning(
+                tokenAddress,
+                expectedFlashloanEnabled
+              )
+            );
+            const newOnChainFlashloanEnabled =
+              await dataProvider.getFlashLoanEnabled(tokenAddress);
+            vvv &&
               console.log(
                 "[FIX] Set ",
                 normalizedSymbol,
@@ -117,7 +120,10 @@ task(`review-flashloan`, ``)
                 newOnChainFlashloanEnabled
               );
           } else {
-            console.log(` - Not pool admin, executed setReserveFlashLoaning from multisig:`, admin);
+            console.log(
+              ` - Not pool admin, executed setReserveFlashLoaning from multisig:`,
+              admin
+            );
             const calldata = poolConfigurator.interface.encodeFunctionData(
               "setReserveFlashLoaning",
               [tokenAddress, expectedFlashloanEnabled]

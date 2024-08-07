@@ -14,6 +14,7 @@ import {
   eBscNetwork,
   eCoredaoNetwork,
   eBOBNetwork,
+  eKlaytnNetwork,
 } from "./types";
 
 const {
@@ -68,6 +69,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eCoredaoNetwork.testnet]: "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
 
   [eBOBNetwork.main]: "0x4200000000000000000000000000000000000006",
+  [eKlaytnNetwork.main]: "0xe4f05a66ec68b54a58b17c22107b02e0232cc817",
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -156,6 +158,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   [eCoredaoNetwork.testnet]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
 
   [eBOBNetwork.main]: "0x97CB85Eb5F892Dd02866672EAB137b3C34501b7b",
+  [eKlaytnNetwork.main]: "0x9cc5a6ac600f9558c9f1651d5bd140ce9b56344a",
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
@@ -202,6 +205,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   [eCoredaoNetwork.testnet]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
 
   [eBOBNetwork.main]: "0x97CB85Eb5F892Dd02866672EAB137b3C34501b7b",
+  [eKlaytnNetwork.main]: "0x9cc5a6ac600f9558c9f1651d5bd140ce9b56344a",
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
@@ -242,6 +246,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eBOBNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
@@ -272,6 +277,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eBOBNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
@@ -339,6 +345,7 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
   [eCoredaoNetwork.testnet]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eBOBNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
