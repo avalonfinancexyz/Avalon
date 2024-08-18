@@ -8,7 +8,7 @@ import {
   rateStrategyVolatileBTC,
 } from "./rateStrategies";
 
-export const strategySOLVBTC: IReserveParams = {
+export const strategyPUMPBTC: IReserveParams = {
   strategy: rateStrategyVolatileBTC,
   baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
@@ -17,7 +17,7 @@ export const strategySOLVBTC: IReserveParams = {
   borrowingEnabled: false,
   stableBorrowRateEnabled: false,
   flashLoanEnabled: false,
-  reserveDecimals: "18",
+  reserveDecimals: "8",
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
   supplyCap: "0",

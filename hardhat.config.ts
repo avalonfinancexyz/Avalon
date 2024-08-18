@@ -170,6 +170,10 @@ export default {
       eEthereumNetwork.mainLsd,
       1
     ),
+    [eEthereumNetwork.pumpBTC]: getCommonNetworkConfig(
+      eEthereumNetwork.pumpBTC,
+      1
+    ),
 
     [eBOBNetwork.main]: {
       minGasPrice: 1_000_000,

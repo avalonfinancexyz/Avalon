@@ -51,6 +51,7 @@ export enum eEthereumNetwork {
   goerli = "goerli",
   sepolia = "sepolia",
   mainLsd = "mainLsd",
+  pumpBTC = "pumpBTC",
 }
 
 export enum eBaseNetwork {

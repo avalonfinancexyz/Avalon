@@ -120,6 +120,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBOBNetwork.main]: `https://rpc.gobob.xyz/`,
   [eBOBNetwork.testnet]: `https://testnet.rpc.gobob.xyz/`,
   [eEthereumNetwork.mainLsd]: `https://eth.meowrpc.com`,
+  [eEthereumNetwork.pumpBTC]: `https://eth.meowrpc.com`,
   [eKlaytnNetwork.main]: `https://public-en-cypress.klaytn.net`,
 };
 
@@ -147,6 +148,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBOBNetwork.main]: true,
   [eBOBNetwork.testnet]: true,
   [eEthereumNetwork.mainLsd]: true,
+  [eEthereumNetwork.pumpBTC]: true,
   [eKlaytnNetwork.main]: true,
 };
 

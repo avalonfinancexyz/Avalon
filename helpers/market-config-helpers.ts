@@ -50,6 +50,7 @@ import BitlayerLSDConfig from "../markets/bitlayerLsd";
 import EthLSDConfig from "../markets/ethLsd";
 import BOBConfig from "../markets/bob";
 import KlaytnConfig from "../markets/klaytn";
+import PumpBTCConfig from "../markets/pumpbtc";
 
 declare var hre: HardhatRuntimeEnvironment;
 
@@ -76,6 +77,7 @@ export enum ConfigNames {
   ETHLSD = "EthLSD",
   BOB = "BOB",
   Klaytn = "Klaytn",
+  PUMPBTC = "PumpBTC",
 }
 
 export const getParamPerNetwork = <T>(
@@ -163,6 +165,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return BOBConfig;
     case ConfigNames.Klaytn:
       return KlaytnConfig;
+    case ConfigNames.PUMPBTC:
+      return PumpBTCConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(
