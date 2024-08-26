@@ -106,6 +106,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
     eBaseNetwork.base
   )}`,
   [eMerlinNetwork.main]: `https://rpc.merlinchain.io`,
+  [eMerlinNetwork.mainUniBTC]: `https://rpc.merlinchain.io`,
   [eMerlinNetwork.mainInn]: `https://rpc.merlinchain.io`,
   [eMerlinNetwork.testnet]: `https://testnet-rpc.merlinchain.io`,
   [eBevmNetwork.main]: `https://rpc-mainnet-1.bevm.io`,
@@ -134,6 +135,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eOptimismNetwork.main]: true,
   [eBaseNetwork.base]: true,
   [eMerlinNetwork.main]: true,
+  [eMerlinNetwork.mainUniBTC]: true,
   [eMerlinNetwork.mainInn]: true,
   // [eMerlinNetwork.testnet]: true,
   [eBevmNetwork.main]: true,
@@ -156,6 +158,7 @@ const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eArbitrumNetwork.goerliNitro]: 100000001,
   [eBaseNetwork.baseGoerli]: 8000000000,
   [eMerlinNetwork.main]: 60000001,
+  [eMerlinNetwork.mainUniBTC]: 60000001,
   [eMerlinNetwork.mainInn]: 60000001,
   [eBitlayerNetwork.main]: 100000008,
   [eBitlayerNetwork.mainLsd]: 100000008,

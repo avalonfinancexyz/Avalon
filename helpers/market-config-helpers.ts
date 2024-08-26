@@ -68,6 +68,7 @@ export enum ConfigNames {
   Base = "Base",
   baseGoerli = "base-goerli",
   Merlin = "Merlin",
+  MerlinUniBTC = "Merlin-UniBTC",
   MerlinInn = "MerlinInn",
   Bevm = "Bevm",
   Bitlayer = "Bitlayer",
@@ -167,6 +168,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return KlaytnConfig;
     case ConfigNames.PUMPBTC:
       return PumpBTCConfig;
+    case ConfigNames.MerlinUniBTC:
+      return MerlinConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(

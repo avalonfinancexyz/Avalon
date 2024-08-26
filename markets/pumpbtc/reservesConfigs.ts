@@ -50,7 +50,7 @@ export const strategyWBTC: IReserveParams = {
   liquidationThreshold: "8000",
   liquidationBonus: "11000",
   liquidationProtocolFee: "1000",
-  borrowingEnabled: false,
+  borrowingEnabled: true,
   stableBorrowRateEnabled: false,
   flashLoanEnabled: false,
   reserveDecimals: "8",

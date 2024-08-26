@@ -87,6 +87,7 @@ export enum eHarmonyNetwork {
 export enum eMerlinNetwork {
   main = "merlin",
   mainInn = "merlin-inn",
+  mainUniBTC = "merlin-unibtc",
   testnet = "merlin-testnet",
 }
 

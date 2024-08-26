@@ -16,6 +16,7 @@ import {
   strategyMSTONE,
   strategySOLVBTCENA,
   strategySOLVBTCBBN,
+  strategyUNIBTC
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -42,15 +43,16 @@ export const MerlinConfig: IAaveConfiguration = {
     WBTC: strategyWBTC,
     MBTC: strategyMBTC,
     // METH: strategyMETH,
-    MORDI: strategyMORDI,
-    MUSDT: strategyMUSDT,
-    MUSDC: strategyMUSDC,
-    SOLVBTC: strategySOLVBTC,
-    MERL: strategyMERL,
-    MSTONE: strategyMSTONE,
-    ORDI: strategyMORDI,
-    SOLVBTCENA: strategySOLVBTCENA,
-    SOLVBTCBBN: strategySOLVBTCBBN,
+    // MORDI: strategyMORDI,
+    // MUSDT: strategyMUSDT,
+    // MUSDC: strategyMUSDC,
+    // SOLVBTC: strategySOLVBTC,
+    // MERL: strategyMERL,
+    // MSTONE: strategyMSTONE,
+    // ORDI: strategyMORDI,
+    // SOLVBTCENA: strategySOLVBTCENA,
+    // SOLVBTCBBN: strategySOLVBTCBBN,
+    UNIBTC: strategyUNIBTC,
   },
   ReserveAssets: {
     [eMerlinNetwork.main]: {
@@ -65,6 +67,11 @@ export const MerlinConfig: IAaveConfiguration = {
       ORDI: "0x7dcb50b2180BC896Da1200D2726a88AF5D2cBB5A",
       SOLVBTCENA: "0x88c618B2396C1A11A6Aabd1bf89228a08462f2d2",
       SOLVBTCBBN: "0x1760900aca15b90fa2eca70ce4b4ec441c2cf6c5",
+    },
+    [eMerlinNetwork.mainUniBTC]: {
+      WBTC: "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
+      MBTC: "0xb880fd278198bd590252621d4cd071b1842e9bcd",
+      UNIBTC: "0x93919784C523f39CACaa98Ee0a9d96c3F32b593e",
     },
     [eMerlinNetwork.testnet]: {
       WBTC: ZERO_ADDRESS,
@@ -81,12 +88,15 @@ export const MerlinConfig: IAaveConfiguration = {
   IncentivesConfig: {
     enabled: {
       [eMerlinNetwork.main]: true,
+      [eMerlinNetwork.mainUniBTC]: true,
       [eMerlinNetwork.testnet]: true,
     },
     rewards: {
       [eMerlinNetwork.main]: {
         // AVAF: "0x5607718c64334eb5174CB2226af891a6ED82c7C6",
         // PAVAF: ZERO_ADDRESS,
+      },
+      [eMerlinNetwork.mainUniBTC]: {
       },
       [eMerlinNetwork.testnet]: {
         // AVAF: ZERO_ADDRESS,
@@ -100,16 +110,8 @@ export const MerlinConfig: IAaveConfiguration = {
     },
     incentivesInput: {
       [eMerlinNetwork.main]: [
-        // {
-        //   emissionPerSecond: "1000000000000000000",
-        //   duration: 2592000,
-        //   asset: "WBTC",
-        //   assetType: AssetType.VariableDebtToken,
-        //   reward: "PAVAF",
-        //   rewardOracle: "0",
-        //   transferStrategy: TransferStrategy.PullRewardsStrategy,
-        //   transferStrategyParams: "0",
-        // },
+      ],
+      [eMerlinNetwork.mainUniBTC]: [
       ],
       [eMerlinNetwork.testnet]: [
         {
@@ -149,6 +151,11 @@ export const MerlinConfig: IAaveConfiguration = {
       ORDI: "0xD585A8905b7596bB24D97B42B4C0d2fF64c5B9d7",
       SOLVBTCENA: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
       SOLVBTCBBN: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+    },
+    [eMerlinNetwork.mainUniBTC]: {
+      WBTC: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+      MBTC: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
+      UNIBTC: "0x07c9ECf0EBfC543C2EC874f1742D3758Dafd716C",
     },
     [eMerlinNetwork.testnet]: {
       WBTC: "0x4675618a1f94c16babf3ad79fcfedd382d94a114",

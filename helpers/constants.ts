@@ -54,6 +54,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eHarmonyNetwork.main]: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
   [ePolygonNetwork.polygon]: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
   [eMerlinNetwork.main]: "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
+  [eMerlinNetwork.mainUniBTC]: "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
   [eMerlinNetwork.mainInn]: "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
   [eMerlinNetwork.testnet]: "0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF",
   [eBevmNetwork.main]: "0xB5136FEba197f5fF4B765E5b50c74db717796dcD",
@@ -142,6 +143,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
 
   // BTC feed
   [eMerlinNetwork.main]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
+  [eMerlinNetwork.mainUniBTC]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
   [eMerlinNetwork.mainInn]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
   [eMerlinNetwork.testnet]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
 
@@ -190,6 +192,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
 
   // BTC feed
   [eMerlinNetwork.main]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
+  [eMerlinNetwork.mainUniBTC]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
   [eMerlinNetwork.mainInn]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
   [eMerlinNetwork.testnet]: "0x6717dc0d87a9bd6849f96948c29e8c8875c10096",
 
@@ -233,6 +236,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eEthereumNetwork.tenderly]: ETHEREUM_SHORT_EXECUTOR,
   // should be a timelock.
   [eMerlinNetwork.main]: "0x8fD3c4C09BF935ff87E7649020e257aBd46020dA",
+  [eMerlinNetwork.mainUniBTC]: "0x8fD3c4C09BF935ff87E7649020e257aBd46020dA",
   [eMerlinNetwork.mainInn]: "0x8fD3c4C09BF935ff87E7649020e257aBd46020dA",
   [eMerlinNetwork.testnet]: "0x513454B3E4A4c9E77740a496A673B36967139269",
   [eBevmNetwork.main]: "0x513454B3E4A4c9E77740a496A673B36967139269",
@@ -265,6 +269,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
   // should be a timelock.
   [eMerlinNetwork.main]: "0x8fD3c4C09BF935ff87E7649020e257aBd46020dA",
+  [eMerlinNetwork.mainUniBTC]: "0x8fD3c4C09BF935ff87E7649020e257aBd46020dA",
   [eMerlinNetwork.mainInn]: "0x8fD3c4C09BF935ff87E7649020e257aBd46020dA",
   [eMerlinNetwork.testnet]: "0x513454B3E4A4c9E77740a496A673B36967139269",
   [eBevmNetwork.main]: "0x513454B3E4A4c9E77740a496A673B36967139269",
@@ -334,6 +339,8 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
 
   // should be a Multisig.
   [eMerlinNetwork.main]: "0x513454B3E4A4c9E77740a496A673B36967139269",
+  [eMerlinNetwork.mainUniBTC]: "0x513454B3E4A4c9E77740a496A673B36967139269",
+  [eMerlinNetwork.mainInn]: "0x513454B3E4A4c9E77740a496A673B36967139269",
   [eMerlinNetwork.testnet]: "0x513454B3E4A4c9E77740a496A673B36967139269",
 
   [eBevmNetwork.main]: "0x513454B3E4A4c9E77740a496A673B36967139269",

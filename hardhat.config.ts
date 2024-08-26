@@ -135,6 +135,7 @@ export default {
       84531
     ),
     [eMerlinNetwork.main]: getCommonNetworkConfig(eMerlinNetwork.main, 4200),
+    [eMerlinNetwork.mainUniBTC]: getCommonNetworkConfig(eMerlinNetwork.mainUniBTC, 4200),
     [eMerlinNetwork.mainInn]: getCommonNetworkConfig(
       eMerlinNetwork.mainInn,
       4200
@@ -276,6 +277,14 @@ export default {
       },
       {
         network: eMerlinNetwork.main,
+        chainId: 4200,
+        urls: {
+          apiURL: "https://scan.merlinchain.io/api/contract",
+          browserURL: "https://scan.merlinchain.io/",
+        },
+      },
+      {
+        network: eMerlinNetwork.mainUniBTC,
         chainId: 4200,
         urls: {
           apiURL: "https://scan.merlinchain.io/api/contract",
