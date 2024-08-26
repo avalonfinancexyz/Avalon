@@ -14,6 +14,7 @@ import {
   strategyBTCB,
   strategySOLVBTCENA,
   strategySOLVBTCBBN,
+  strategyPUMPBTC,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -39,14 +40,15 @@ export const BscConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    WBNB: strategyWBNB,
-    ETH: strategyETH,
-    USDC: strategyUSDC,
-    USDT: strategyUSDT,
-    SOLVBTC: strategySOLVBTC,
+    // WBNB: strategyWBNB,
+    // ETH: strategyETH,
+    // USDC: strategyUSDC,
+    // USDT: strategyUSDT,
+    // SOLVBTC: strategySOLVBTC,
     BTCB: strategyBTCB,
-    SOLVBTCENA: strategySOLVBTCENA,
-    SOLVBTCBBN: strategySOLVBTCBBN,
+    // SOLVBTCENA: strategySOLVBTCENA,
+    // SOLVBTCBBN: strategySOLVBTCBBN,
+    PUMPBTC: strategyPUMPBTC,
   },
   ReserveAssets: {
     [eBscNetwork.main]: {
@@ -59,6 +61,10 @@ export const BscConfig: IAaveConfiguration = {
       SOLVBTCENA: "0x53E63a31fD1077f949204b94F431bCaB98F72BCE",
       SOLVBTCBBN: "0x1346b618dc92810ec74163e4c27004c921d446a5",
     },
+    [eBscNetwork.mainPumpBTC]: {
+      BTCB: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      PUMPBTC: "0xf9C4FF105803A77eCB5DAE300871Ad76c2794fa4",
+    },
     [eBscNetwork.testnet]: {
       WBNB: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
     },
@@ -66,28 +72,20 @@ export const BscConfig: IAaveConfiguration = {
   IncentivesConfig: {
     enabled: {
       [eBscNetwork.main]: true,
+      [eBscNetwork.mainPumpBTC]: true,
       [eBscNetwork.testnet]: true,
     },
     rewards: {
       [eBscNetwork.main]: {},
+      [eBscNetwork.mainPumpBTC]: {},
       [eBscNetwork.testnet]: {
         POINTS: ZERO_ADDRESS,
       },
     },
     rewardsOracle: {},
     incentivesInput: {
-      [eBscNetwork.main]: [
-        // {
-        //   emissionPerSecond: "1000000000000000000",
-        //   duration: 2592000,
-        //   asset: "WBTC",
-        //   assetType: AssetType.VariableDebtToken,
-        //   reward: "PAVAF",
-        //   rewardOracle: "0",
-        //   transferStrategy: TransferStrategy.PullRewardsStrategy,
-        //   transferStrategyParams: "0",
-        // },
-      ],
+      [eBscNetwork.main]: [],
+      [eBscNetwork.mainPumpBTC]: [],
       [eBscNetwork.testnet]: [],
     },
   },
@@ -102,6 +100,10 @@ export const BscConfig: IAaveConfiguration = {
       BTCB: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
       SOLVBTCENA: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
       SOLVBTCBBN: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
+    },
+    [eBscNetwork.mainPumpBTC]: {
+      BTCB: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
+      PUMPBTC: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
     },
     [eBscNetwork.testnet]: {
       WBNB: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",

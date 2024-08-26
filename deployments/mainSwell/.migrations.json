@@ -1,0 +1,16 @@
+{
+  "PoolAddressesProviderRegistry": 1723975830,
+  "LogicLibraries": 1723975973,
+  "Treasury": 1723976042,
+  "PoolAddressesProvider:EthSwell:aave-v3-core@1.19.3": 1723976114,
+  "PoolConfigurator": 1723976166,
+  "ACLManager:EthSwell:aave-v3-core@1.19.3": 1723976250,
+  "Oracles:EthSwell:aave-v3-core@1.19.3": 1723976260,
+  "InitOracles:EthSwell:aave-v3-core@1.19.3": 1723976269,
+  "PoolInitalization:EthSwell:aave-v3-core@1.19.3": 1723976321,
+  "Incentives:EthSwell:aave-v3-periphery@2.5.2": 1723976439,
+  "TokenImplementations:EthSwell:aave-v3-core@1.19.3": 1723976583,
+  "ReservesInit:EthSwell:aave-v3-core@1.19.3": 1723976755,
+  "PeripheryInit:EthSwell:aave-v3-periphery@2.5.2": 1723976755,
+  "IncentivesV2:EthSwell:aave-v3-periphery@2.5.2": 1723976859
+}

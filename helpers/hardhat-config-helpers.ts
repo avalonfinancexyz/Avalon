@@ -115,12 +115,14 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBitlayerNetwork.mainLsd]: `https://rpc.bitlayer-rpc.com`,
   [eBitlayerNetwork.testnet]: `https://testnet-rpc.bitlayer-rpc.com`,
   [eBscNetwork.main]: `https://bsc-dataseed1.defibit.io`,
+  [eBscNetwork.mainPumpBTC]: `https://bsc-dataseed1.defibit.io`,
   [eBscNetwork.testnet]: `https://bsc-testnet.blockpi.network/v1/rpc/public`,
   [eCoredaoNetwork.main]: `https://rpc.coredao.org`,
   [eCoredaoNetwork.testnet]: `https://rpc.test.btcs.network`,
   [eBOBNetwork.main]: `https://rpc.gobob.xyz/`,
   [eBOBNetwork.testnet]: `https://testnet.rpc.gobob.xyz/`,
   [eEthereumNetwork.mainLsd]: `https://eth.meowrpc.com`,
+  [eEthereumNetwork.mainSwell]: `https://eth.meowrpc.com`,
   [eEthereumNetwork.pumpBTC]: `https://eth.meowrpc.com`,
   [eKlaytnNetwork.main]: `https://public-en-cypress.klaytn.net`,
 };
@@ -144,12 +146,14 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBitlayerNetwork.mainLsd]: true,
   [eBitlayerNetwork.testnet]: true,
   [eBscNetwork.main]: true,
+  [eBscNetwork.mainPumpBTC]: true,
   [eBscNetwork.testnet]: true,
   [eCoredaoNetwork.main]: true,
   [eCoredaoNetwork.testnet]: true,
   [eBOBNetwork.main]: true,
   [eBOBNetwork.testnet]: true,
   [eEthereumNetwork.mainLsd]: true,
+  [eEthereumNetwork.mainSwell]: true,
   [eEthereumNetwork.pumpBTC]: true,
   [eKlaytnNetwork.main]: true,
 };
@@ -163,6 +167,7 @@ const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eBitlayerNetwork.main]: 100000008,
   [eBitlayerNetwork.mainLsd]: 100000008,
   [eBscNetwork.main]: 3000000000,
+  [eBscNetwork.mainPumpBTC]: 3000000000,
   [eBOBNetwork.main]: 10000,
 };
 

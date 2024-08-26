@@ -160,6 +160,10 @@ export default {
     ),
 
     [eBscNetwork.main]: getCommonNetworkConfig(eBscNetwork.main, 56),
+    [eBscNetwork.mainPumpBTC]: getCommonNetworkConfig(
+      eBscNetwork.mainPumpBTC,
+      56
+    ),
     [eBscNetwork.testnet]: getCommonNetworkConfig(eBscNetwork.testnet, 97),
 
     [eCoredaoNetwork.main]: getCommonNetworkConfig(eCoredaoNetwork.main, 1116),
@@ -169,6 +173,10 @@ export default {
     ),
     [eEthereumNetwork.mainLsd]: getCommonNetworkConfig(
       eEthereumNetwork.mainLsd,
+      1
+    ),
+    [eEthereumNetwork.mainSwell]: getCommonNetworkConfig(
+      eEthereumNetwork.mainSwell,
       1
     ),
     [eEthereumNetwork.pumpBTC]: getCommonNetworkConfig(

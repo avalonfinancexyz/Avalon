@@ -64,6 +64,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eBitlayerNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
 
   [eBscNetwork.main]: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+  [eBscNetwork.mainPumpBTC]: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
   [eBscNetwork.testnet]: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
 
   [eCoredaoNetwork.main]: "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
@@ -74,6 +75,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  [eEthereumNetwork.mainSwell]: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   [eEthereumNetwork.pumpBTC]: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
 };
 
@@ -155,6 +157,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
 
   [eBscNetwork.main]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
+  [eBscNetwork.mainPumpBTC]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
   [eBscNetwork.testnet]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
 
   [eCoredaoNetwork.main]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
@@ -165,6 +168,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+  [eEthereumNetwork.mainSwell]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
   [eEthereumNetwork.pumpBTC]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
 };
 
@@ -204,6 +208,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
 
   [eBscNetwork.main]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
+  [eBscNetwork.mainPumpBTC]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
   [eBscNetwork.testnet]: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",
 
   [eCoredaoNetwork.main]: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
@@ -214,6 +219,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+  [eEthereumNetwork.mainSwell]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
   [eEthereumNetwork.pumpBTC]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
 };
 
@@ -247,6 +253,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
   [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
+  [eBscNetwork.mainPumpBTC]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
   [eBscNetwork.testnet]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -256,6 +263,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eEthereumNetwork.mainSwell]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eEthereumNetwork.pumpBTC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
@@ -280,6 +288,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
   [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
+  [eBscNetwork.mainPumpBTC]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
   [eBscNetwork.testnet]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -289,6 +298,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eEthereumNetwork.mainSwell]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eEthereumNetwork.pumpBTC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
@@ -351,6 +361,7 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
   [eBscNetwork.main]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
+  [eBscNetwork.mainPumpBTC]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
   [eBscNetwork.testnet]: "0x186097b7754d95D0cf011356811A81D4774dA1Dd",
 
   [eCoredaoNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -361,6 +372,7 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eEthereumNetwork.mainSwell]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eEthereumNetwork.pumpBTC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 };
 
