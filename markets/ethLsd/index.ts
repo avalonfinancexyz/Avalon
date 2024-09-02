@@ -6,7 +6,12 @@ import {
   TransferStrategy,
 } from "../../helpers/types";
 import AaveMarket from "../aave";
-import { strategySOLVBTC, strategyFBTC, strategyWBTC } from "./reservesConfigs";
+import {
+  strategySOLVBTC,
+  strategyFBTC,
+  strategyWBTC,
+  strategySOLVBTCBBN,
+} from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
   rateStrategyStableOne,
@@ -33,12 +38,14 @@ export const EthLSDConfig: IAaveConfiguration = {
     SOLVBTC: strategySOLVBTC,
     FBTC: strategyFBTC,
     WBTC: strategyWBTC,
+    SOLVBTCBBN: strategySOLVBTCBBN,
   },
   ReserveAssets: {
     [eEthereumNetwork.mainLsd]: {
-      // SOLVBTC: "0x7a56e1c57c7475ccf742a1832b028f0456652f97",
-      // FBTC: "0xc96de26018a54d51c097160568752c4e3bd6c364",
+      SOLVBTC: "0x7a56e1c57c7475ccf742a1832b028f0456652f97",
+      FBTC: "0xc96de26018a54d51c097160568752c4e3bd6c364",
       WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      SOLVBTCBBN: "0xd9D920AA40f578ab794426F5C90F6C731D159DEf",
     },
     // [eEthereumNetwork.sepolia]: {
     //   WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
@@ -81,6 +88,7 @@ export const EthLSDConfig: IAaveConfiguration = {
       SOLVBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       FBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      SOLVBTCBBN: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
     },
     // [eEthereumNetwork.sepolia]: {
     //   WBTC: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
