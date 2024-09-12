@@ -74,6 +74,7 @@ export enum ConfigNames {
   Bevm = "Bevm",
   Bitlayer = "Bitlayer",
   BitlayerLsd = "BitlayerLsd",
+  BitlayerBRC = "BitlayerBRC",
   Bsc = "Bsc",
   Coredao = "Coredao",
   ETHLSD = "EthLSD",
@@ -82,6 +83,10 @@ export enum ConfigNames {
   Klaytn = "Klaytn",
   PUMPBTC = "PumpBTC",
   BscPUMPBTC = "Bsc-Pumpbtc",
+  BscSTBTC = "Bsc-Stbtc",
+  STKaia = "Klaytn-stkaia",
+  LBTCLSD = "LBTCLSD",
+  EBTCLSD = "EBTCLSD",
 }
 
 export const getParamPerNetwork = <T>(
@@ -162,8 +167,11 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
     case ConfigNames.Coredao:
       return CoredaoConfig;
     case ConfigNames.BitlayerLsd:
+    case ConfigNames.BitlayerBRC:
       return BitlayerLSDConfig;
     case ConfigNames.ETHLSD:
+    case ConfigNames.LBTCLSD:
+    case ConfigNames.EBTCLSD:
       return EthLSDConfig;
     case ConfigNames.BOB:
       return BOBConfig;
@@ -177,6 +185,10 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return BscConfig;
     case ConfigNames.ETHSWELL:
       return EthSwellConfig;
+    case ConfigNames.BscSTBTC:
+      return BscConfig;
+    case ConfigNames.STKaia:
+      return KlaytnConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(

@@ -8,6 +8,7 @@ import {
   rateStrategyVolatileThree,
   rateStrategyVolatileBTCOne,
   rateStrategyVolatileBTCTwo,
+  rateStrategyVolatileBTCThree,
 } from "./rateStrategies";
 
 export const strategyWBNB: IReserveParams = {
@@ -83,7 +84,7 @@ export const strategyUSDT: IReserveParams = {
 };
 
 export const strategySOLVBTC: IReserveParams = {
-  strategy: rateStrategyVolatileBTCTwo,
+  strategy: rateStrategyVolatileBTCThree,
   baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "12000",
@@ -101,7 +102,7 @@ export const strategySOLVBTC: IReserveParams = {
 };
 
 export const strategyBTCB: IReserveParams = {
-  strategy: rateStrategyVolatileBTCOne,
+  strategy: rateStrategyVolatileBTCThree,
   baseLTVAsCollateral: "7000",
   liquidationThreshold: "8500",
   liquidationBonus: "11000",
@@ -119,7 +120,7 @@ export const strategyBTCB: IReserveParams = {
 };
 
 export const strategySOLVBTCENA: IReserveParams = {
-  strategy: rateStrategyVolatileBTCOne,
+  strategy: rateStrategyVolatileBTCThree,
   baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "12000",
@@ -137,7 +138,7 @@ export const strategySOLVBTCENA: IReserveParams = {
 };
 
 export const strategySOLVBTCBBN: IReserveParams = {
-  strategy: rateStrategyVolatileBTCOne,
+  strategy: rateStrategyVolatileBTCThree,
   baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "12000",
@@ -155,7 +156,7 @@ export const strategySOLVBTCBBN: IReserveParams = {
 };
 
 export const strategyPUMPBTC: IReserveParams = {
-  strategy: rateStrategyVolatileBTCOne,
+  strategy: rateStrategyVolatileBTCThree,
   baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "12000",
@@ -164,6 +165,24 @@ export const strategyPUMPBTC: IReserveParams = {
   stableBorrowRateEnabled: false,
   flashLoanEnabled: false,
   reserveDecimals: "8",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategySTBTC: IReserveParams = {
+  strategy: rateStrategyVolatileBTCThree,
+  baseLTVAsCollateral: "7000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "12000",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
   supplyCap: "0",

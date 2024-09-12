@@ -11,6 +11,8 @@ import {
   strategyFBTC,
   strategyWBTC,
   strategySOLVBTCBBN,
+  strategyLBTC,
+  strategyEBTC,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -35,10 +37,12 @@ export const EthLSDConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    SOLVBTC: strategySOLVBTC,
-    FBTC: strategyFBTC,
+    // SOLVBTC: strategySOLVBTC,
+    // FBTC: strategyFBTC,
     WBTC: strategyWBTC,
-    SOLVBTCBBN: strategySOLVBTCBBN,
+    // SOLVBTCBBN: strategySOLVBTCBBN,
+    // LBTC: strategyLBTC,
+    EBTC: strategyEBTC,
   },
   ReserveAssets: {
     [eEthereumNetwork.mainLsd]: {
@@ -46,6 +50,14 @@ export const EthLSDConfig: IAaveConfiguration = {
       FBTC: "0xc96de26018a54d51c097160568752c4e3bd6c364",
       WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       SOLVBTCBBN: "0xd9D920AA40f578ab794426F5C90F6C731D159DEf",
+    },
+    [eEthereumNetwork.LBTCLSD]: {
+      LBTC: "0x8236a87084f8B84306f72007F36F2618A5634494",
+      WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    },
+    [eEthereumNetwork.EBTCLSD]: {
+      EBTC: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
+      WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
     },
     // [eEthereumNetwork.sepolia]: {
     //   WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
@@ -57,10 +69,14 @@ export const EthLSDConfig: IAaveConfiguration = {
   IncentivesConfig: {
     enabled: {
       [eEthereumNetwork.mainLsd]: true,
+      [eEthereumNetwork.LBTCLSD]: true,
+      [eEthereumNetwork.EBTCLSD]: true,
       // [eEthereumNetwork.sepolia]: true,
     },
     rewards: {
       [eEthereumNetwork.mainLsd]: {},
+      [eEthereumNetwork.LBTCLSD]: {},
+      [eEthereumNetwork.EBTCLSD]: {},
       // [eEthereumNetwork.sepolia]: {
       //   POINTS: ZERO_ADDRESS,
       // },
@@ -79,6 +95,8 @@ export const EthLSDConfig: IAaveConfiguration = {
         //   transferStrategyParams: "0",
         // },
       ],
+      [eEthereumNetwork.LBTCLSD]: [],
+      [eEthereumNetwork.EBTCLSD]: [],
       // [eEthereumNetwork.sepolia]: [],
     },
   },
@@ -89,6 +107,14 @@ export const EthLSDConfig: IAaveConfiguration = {
       FBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       SOLVBTCBBN: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+    },
+    [eEthereumNetwork.LBTCLSD]: {
+      LBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+    },
+    [eEthereumNetwork.EBTCLSD]: {
+      EBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
     },
     // [eEthereumNetwork.sepolia]: {
     //   WBTC: "0x2b3f685266524e921cb5dd3094e57e85a3000487",

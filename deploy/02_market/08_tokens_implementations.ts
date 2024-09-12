@@ -49,18 +49,18 @@ const func: DeployFunction = async function ({
     aTokenArtifact.abi,
     aTokenArtifact.address
   )) as AToken;
-  // await waitForTx(
-  //   await aToken.initialize(
-  //     poolAddress, // initializingPool
-  //     ZERO_ADDRESS, // treasury
-  //     ZERO_ADDRESS, // underlyingAsset
-  //     ZERO_ADDRESS, // incentivesController
-  //     0, // aTokenDecimals
-  //     "ATOKEN_IMPL", // aTokenName
-  //     "ATOKEN_IMPL", // aTokenSymbol
-  //     "0x00" // params
-  //   )
-  // );
+  await waitForTx(
+    await aToken.initialize(
+      poolAddress, // initializingPool
+      ZERO_ADDRESS, // treasury
+      ZERO_ADDRESS, // underlyingAsset
+      ZERO_ADDRESS, // incentivesController
+      0, // aTokenDecimals
+      "ATOKEN_IMPL", // aTokenName
+      "ATOKEN_IMPL", // aTokenSymbol
+      "0x00" // params
+    )
+  );
 
   const delegationAwareATokenArtifact = await deploy(
     DELEGATION_AWARE_ATOKEN_IMPL_ID,

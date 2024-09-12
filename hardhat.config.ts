@@ -135,7 +135,10 @@ export default {
       84531
     ),
     [eMerlinNetwork.main]: getCommonNetworkConfig(eMerlinNetwork.main, 4200),
-    [eMerlinNetwork.mainUniBTC]: getCommonNetworkConfig(eMerlinNetwork.mainUniBTC, 4200),
+    [eMerlinNetwork.mainUniBTC]: getCommonNetworkConfig(
+      eMerlinNetwork.mainUniBTC,
+      4200
+    ),
     [eMerlinNetwork.mainInn]: getCommonNetworkConfig(
       eMerlinNetwork.mainInn,
       4200
@@ -154,6 +157,10 @@ export default {
       eBitlayerNetwork.mainLsd,
       200901
     ),
+    [eBitlayerNetwork.mainBRC]: getCommonNetworkConfig(
+      eBitlayerNetwork.mainBRC,
+      200901
+    ),
     [eBitlayerNetwork.testnet]: getCommonNetworkConfig(
       eBitlayerNetwork.testnet,
       200810
@@ -164,6 +171,7 @@ export default {
       eBscNetwork.mainPumpBTC,
       56
     ),
+    [eBscNetwork.mainStBTC]: getCommonNetworkConfig(eBscNetwork.mainStBTC, 56),
     [eBscNetwork.testnet]: getCommonNetworkConfig(eBscNetwork.testnet, 97),
 
     [eCoredaoNetwork.main]: getCommonNetworkConfig(eCoredaoNetwork.main, 1116),
@@ -184,6 +192,16 @@ export default {
       1
     ),
 
+    [eEthereumNetwork.LBTCLSD]: getCommonNetworkConfig(
+      eEthereumNetwork.LBTCLSD,
+      1
+    ),
+
+    [eEthereumNetwork.EBTCLSD]: getCommonNetworkConfig(
+      eEthereumNetwork.EBTCLSD,
+      1
+    ),
+
     [eBOBNetwork.main]: {
       minGasPrice: 1_000_000,
       ...getCommonNetworkConfig(eBOBNetwork.main, 60808),
@@ -191,6 +209,9 @@ export default {
 
     [eKlaytnNetwork.main]: {
       ...getCommonNetworkConfig(eKlaytnNetwork.main, 8217),
+    },
+    [eKlaytnNetwork.mainStKaia]: {
+      ...getCommonNetworkConfig(eKlaytnNetwork.mainStKaia, 8217),
     },
   },
   namedAccounts: {
@@ -333,6 +354,14 @@ export default {
       },
       {
         network: eBitlayerNetwork.mainLsd,
+        chainId: 200901,
+        urls: {
+          apiURL: "https://api.btrscan.com/scan/api",
+          browserURL: "https://www.btrscan.com/",
+        },
+      },
+      {
+        network: eBitlayerNetwork.mainBRC,
         chainId: 200901,
         urls: {
           apiURL: "https://api.btrscan.com/scan/api",

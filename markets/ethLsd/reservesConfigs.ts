@@ -79,3 +79,39 @@ export const strategySOLVBTCBBN: IReserveParams = {
   debtCeiling: "0",
   borrowableIsolation: false,
 };
+
+export const strategyLBTC: IReserveParams = {
+  strategy: rateStrategyVolatileBTC,
+  baseLTVAsCollateral: "7000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "11000",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: true,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: true,
+  reserveDecimals: "8",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
+export const strategyEBTC: IReserveParams = {
+  strategy: rateStrategyVolatileBTC,
+  baseLTVAsCollateral: "7000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "11000",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: true,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: true,
+  reserveDecimals: "8",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};

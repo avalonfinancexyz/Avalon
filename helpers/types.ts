@@ -53,6 +53,8 @@ export enum eEthereumNetwork {
   mainLsd = "mainLsd",
   mainSwell = "mainSwell",
   pumpBTC = "pumpBTC",
+  LBTCLSD = "LBTCLSD",
+  EBTCLSD = "EBTCLSD",
 }
 
 export enum eBaseNetwork {
@@ -100,12 +102,14 @@ export enum eBevmNetwork {
 export enum eBitlayerNetwork {
   main = "bitlayer",
   mainLsd = "bitlayer-lsd",
+  mainBRC = "bitlayer-brc",
   testnet = "bitlayer-testnet",
 }
 
 export enum eBscNetwork {
   main = "bsc",
   mainPumpBTC = "bsc-pumpbtc",
+  mainStBTC = "bsc-stbtc",
   testnet = "bsc-testnet",
 }
 
@@ -121,6 +125,7 @@ export enum eBOBNetwork {
 
 export enum eKlaytnNetwork {
   main = "klaytn",
+  mainStKaia = "klaytn-stkaia",
   testnet = "klaytn-testnet",
 }
 

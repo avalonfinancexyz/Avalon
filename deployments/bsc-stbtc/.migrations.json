@@ -1,0 +1,16 @@
+{
+  "PoolAddressesProviderRegistry": 1725470190,
+  "LogicLibraries": 1725470230,
+  "Treasury": 1725470257,
+  "PoolAddressesProvider:Bsc-Stbtc:aave-v3-core@1.19.3": 1725470574,
+  "PoolConfigurator": 1725470593,
+  "ACLManager:Bsc-Stbtc:aave-v3-core@1.19.3": 1725470616,
+  "Oracles:Bsc-Stbtc:aave-v3-core@1.19.3": 1725470621,
+  "InitOracles:Bsc-Stbtc:aave-v3-core@1.19.3": 1725470625,
+  "PoolInitalization:Bsc-Stbtc:aave-v3-core@1.19.3": 1725470644,
+  "Incentives:Bsc-Stbtc:aave-v3-periphery@2.5.2": 1725470672,
+  "TokenImplementations:Bsc-Stbtc:aave-v3-core@1.19.3": 1725470706,
+  "ReservesInit:Bsc-Stbtc:aave-v3-core@1.19.3": 1725471368,
+  "PeripheryInit:Bsc-Stbtc:aave-v3-periphery@2.5.2": 1725471368,
+  "IncentivesV2:Bsc-Stbtc:aave-v3-periphery@2.5.2": 1725472461
+}

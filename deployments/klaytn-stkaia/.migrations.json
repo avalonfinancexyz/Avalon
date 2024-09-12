@@ -1,0 +1,16 @@
+{
+  "PoolAddressesProviderRegistry": 1725901951,
+  "LogicLibraries": 1725901982,
+  "Treasury": 1725904010,
+  "PoolAddressesProvider:Klaytn-stkaia:aave-v3-core@1.19.3": 1725904043,
+  "PoolConfigurator": 1725904058,
+  "ACLManager:Klaytn-stkaia:aave-v3-core@1.19.3": 1725904077,
+  "Oracles:Klaytn-stkaia:aave-v3-core@1.19.3": 1725904857,
+  "InitOracles:Klaytn-stkaia:aave-v3-core@1.19.3": 1725904862,
+  "PoolInitalization:Klaytn-stkaia:aave-v3-core@1.19.3": 1725904885,
+  "Incentives:Klaytn-stkaia:aave-v3-periphery@2.5.2": 1725904916,
+  "TokenImplementations:Klaytn-stkaia:aave-v3-core@1.19.3": 1725904953,
+  "ReservesInit:Klaytn-stkaia:aave-v3-core@1.19.3": 1725905006,
+  "PeripheryInit:Klaytn-stkaia:aave-v3-periphery@2.5.2": 1725905006,
+  "IncentivesV2:Klaytn-stkaia:aave-v3-periphery@2.5.2": 1725905045
+}
