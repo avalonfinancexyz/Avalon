@@ -157,6 +157,10 @@ export default {
       eBitlayerNetwork.mainLsd,
       200901
     ),
+    [eBitlayerNetwork.unibtc]: getCommonNetworkConfig(
+      eBitlayerNetwork.unibtc,
+      200901
+    ),
     [eBitlayerNetwork.mainBRC]: getCommonNetworkConfig(
       eBitlayerNetwork.mainBRC,
       200901
@@ -354,6 +358,14 @@ export default {
       },
       {
         network: eBitlayerNetwork.mainLsd,
+        chainId: 200901,
+        urls: {
+          apiURL: "https://api.btrscan.com/scan/api",
+          browserURL: "https://www.btrscan.com/",
+        },
+      },
+      {
+        network: eBitlayerNetwork.unibtc,
         chainId: 200901,
         urls: {
           apiURL: "https://api.btrscan.com/scan/api",

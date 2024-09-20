@@ -61,6 +61,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eBevmNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
   [eBitlayerNetwork.main]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
   [eBitlayerNetwork.mainLsd]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
+  [eBitlayerNetwork.unibtc]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
   [eBitlayerNetwork.mainBRC]: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
   [eBitlayerNetwork.testnet]: "0x09Ff8E49D0EA411A3422ed95E8f5497D4241F532",
 
@@ -159,6 +160,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.mainLsd]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+  [eBitlayerNetwork.unibtc]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.mainBRC]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
 
@@ -215,6 +217,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.mainLsd]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+  [eBitlayerNetwork.unibtc]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.mainBRC]: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
   [eBitlayerNetwork.testnet]: "0x2b3f685266524e921cb5dd3094e57e85a3000487",
 
@@ -265,6 +268,7 @@ export const POOL_ADMIN: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
   [eBitlayerNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBitlayerNetwork.unibtc]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.mainBRC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
@@ -305,6 +309,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
 
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
   [eBitlayerNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBitlayerNetwork.unibtc]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.mainBRC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 
@@ -383,6 +388,7 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
 
   [eBitlayerNetwork.main]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
   [eBitlayerNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+  [eBitlayerNetwork.unibtc]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.mainBRC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eBitlayerNetwork.testnet]: "0xaCbF6b6aFcd32B50238Ed59bD57aDD93E534892E",
 

@@ -74,6 +74,7 @@ export enum ConfigNames {
   Bevm = "Bevm",
   Bitlayer = "Bitlayer",
   BitlayerLsd = "BitlayerLsd",
+  BitlayerUniBTC = "Bitlayer-UniBTC",
   BitlayerBRC = "BitlayerBRC",
   Bsc = "Bsc",
   Coredao = "Coredao",
@@ -168,6 +169,7 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return CoredaoConfig;
     case ConfigNames.BitlayerLsd:
     case ConfigNames.BitlayerBRC:
+    case ConfigNames.BitlayerUniBTC:
       return BitlayerLSDConfig;
     case ConfigNames.ETHLSD:
     case ConfigNames.LBTCLSD:

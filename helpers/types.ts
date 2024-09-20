@@ -103,6 +103,8 @@ export enum eBitlayerNetwork {
   main = "bitlayer",
   mainLsd = "bitlayer-lsd",
   mainBRC = "bitlayer-brc",
+
+  unibtc = "bitlayer-unibtc",
   testnet = "bitlayer-testnet",
 }
 

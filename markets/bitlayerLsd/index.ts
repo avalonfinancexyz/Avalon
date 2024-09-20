@@ -5,7 +5,7 @@ import {
   TransferStrategy,
 } from "../../helpers/types";
 import AaveMarket from "../aave";
-import { strategyWBTC, strategySTBTC } from "./reservesConfigs";
+import { strategyWBTC, strategySTBTC, strategyUNIBTC } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
   rateStrategyStableOne,
@@ -30,12 +30,17 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
   TestnetMarket: false,
   ReservesConfig: {
     WBTC: strategyWBTC,
-    STBTC: strategySTBTC,
+    // STBTC: strategySTBTC,
+    UNIBTC: strategyUNIBTC,
   },
   ReserveAssets: {
     [eBitlayerNetwork.mainLsd]: {
       WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
       STBTC: "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3",
+    },
+    [eBitlayerNetwork.unibtc]: {
+      WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
+      UNIBTC: "0x93919784C523f39CACaa98Ee0a9d96c3F32b593e",
     },
     [eBitlayerNetwork.mainBRC]: {
       ORDI: "0xde9f57a5b8844ebf607eceffaa2505bb961701a4",
@@ -52,11 +57,13 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
   IncentivesConfig: {
     enabled: {
       [eBitlayerNetwork.mainLsd]: true,
+      [eBitlayerNetwork.unibtc]: true,
       [eBitlayerNetwork.mainBRC]: true,
       [eBitlayerNetwork.testnet]: true,
     },
     rewards: {
       [eBitlayerNetwork.mainLsd]: {},
+      [eBitlayerNetwork.unibtc]: {},
       [eBitlayerNetwork.mainBRC]: {},
       [eBitlayerNetwork.testnet]: {
         POINTS: ZERO_ADDRESS,
@@ -76,6 +83,7 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
         //   transferStrategyParams: "0",
         // },
       ],
+      [eBitlayerNetwork.unibtc]: [],
       [eBitlayerNetwork.mainBRC]: [],
       [eBitlayerNetwork.testnet]: [],
     },
@@ -85,6 +93,10 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
     [eBitlayerNetwork.mainLsd]: {
       WBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
       STBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+    },
+    [eBitlayerNetwork.unibtc]: {
+      WBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
+      UNIBTC: "0x29304F0c6fd0Db604312d6E982164e1E7C3adAD9",
     },
     [eBitlayerNetwork.mainBRC]: {
       ORDI: "0x5bc336e6EC6445fAd4064cF1C5Fc1C1bdd804E24",
