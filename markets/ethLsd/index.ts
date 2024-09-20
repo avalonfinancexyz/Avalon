@@ -13,6 +13,7 @@ import {
   strategySOLVBTCBBN,
   strategyLBTC,
   strategyEBTC,
+  rateStrategyPTBTC,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -37,12 +38,13 @@ export const EthLSDConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    // SOLVBTC: strategySOLVBTC,
-    // FBTC: strategyFBTC,
+    SOLVBTC: strategySOLVBTC,
+    FBTC: strategyFBTC,
     WBTC: strategyWBTC,
-    // SOLVBTCBBN: strategySOLVBTCBBN,
+    SOLVBTCBBN: strategySOLVBTCBBN,
     // LBTC: strategyLBTC,
-    EBTC: strategyEBTC,
+    // EBTC: strategyEBTC,
+    PTcornSolvBTCBBN26DEC2024: rateStrategyPTBTC,
   },
   ReserveAssets: {
     [eEthereumNetwork.mainLsd]: {
@@ -50,6 +52,7 @@ export const EthLSDConfig: IAaveConfiguration = {
       FBTC: "0xc96de26018a54d51c097160568752c4e3bd6c364",
       WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       SOLVBTCBBN: "0xd9D920AA40f578ab794426F5C90F6C731D159DEf",
+      PTcornSolvBTCBBN26DEC2024: "0x23e479ddcda990E8523494895759bD98cD2fDBF6",
     },
     [eEthereumNetwork.LBTCLSD]: {
       LBTC: "0x8236a87084f8B84306f72007F36F2618A5634494",
@@ -107,6 +110,7 @@ export const EthLSDConfig: IAaveConfiguration = {
       FBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       SOLVBTCBBN: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      PTcornSolvBTCBBN26DEC2024: "0xA4886BeB14E27Bc6De4A504Eb43e1a7B20961Fa4",
     },
     [eEthereumNetwork.LBTCLSD]: {
       LBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
