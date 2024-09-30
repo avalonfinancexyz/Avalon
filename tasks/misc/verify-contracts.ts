@@ -8,5 +8,6 @@ task(`verify-contracts`).setAction(
     await hre.run("verify-periphery-post");
     await hre.run("verify-periphery");
     await hre.run("verify-tokens");
+    await hre.run("verify-impls");
   }
 );

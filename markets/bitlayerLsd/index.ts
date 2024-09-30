@@ -5,7 +5,13 @@ import {
   TransferStrategy,
 } from "../../helpers/types";
 import AaveMarket from "../aave";
-import { strategyWBTC, strategySTBTC, strategyUNIBTC } from "./reservesConfigs";
+import {
+  strategyWBTC,
+  strategySTBTC,
+  strategyUNIBTC,
+  strategyORDI,
+  strategyRATS,
+} from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
   rateStrategyStableOne,
@@ -29,9 +35,11 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    WBTC: strategyWBTC,
+    // WBTC: strategyWBTC,
     // STBTC: strategySTBTC,
-    UNIBTC: strategyUNIBTC,
+    // UNIBTC: strategyUNIBTC,
+    ORDI: strategyORDI,
+    RATS: strategyRATS,
   },
   ReserveAssets: {
     [eBitlayerNetwork.mainLsd]: {
@@ -44,7 +52,7 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
     },
     [eBitlayerNetwork.mainBRC]: {
       ORDI: "0xde9f57a5b8844ebf607eceffaa2505bb961701a4",
-      SATS: "0x8dae8b60f16a10edfac1714394688e006ff369fa",
+      // SATS: "0x8dae8b60f16a10edfac1714394688e006ff369fa",
       RATS: "0x0d922f10d86243ceff899f15571f51951e8b20f6",
     },
     [eBitlayerNetwork.testnet]: {
@@ -100,7 +108,7 @@ export const BitlayerLSDConfig: IAaveConfiguration = {
     },
     [eBitlayerNetwork.mainBRC]: {
       ORDI: "0x5bc336e6EC6445fAd4064cF1C5Fc1C1bdd804E24",
-      SATS: "0x7016A47Da8968aF65De13Da41F722307A7a9A0e1",
+      // SATS: "0x7016A47Da8968aF65De13Da41F722307A7a9A0e1",
       RATS: "0x4D2A17d819cD25AC1a9A3B36a97ad87787378048",
     },
     [eBitlayerNetwork.testnet]: {
