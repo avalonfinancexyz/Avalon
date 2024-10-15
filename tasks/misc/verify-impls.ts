@@ -5,6 +5,7 @@ import {
   DISABLE_ATOKEN_IMPL_ID,
   DISABLE_STABLE_DEBT_TOKEN_IMPL_ID,
   ATOKENV2_IMPL_ID,
+  ATOKENV4_IMPL_ID,
   POOL_PROXY_ID,
 } from "../../helpers/deploy-ids";
 import { POOL_ADMIN } from "../../helpers/constants";
@@ -43,6 +44,16 @@ task(`verify-impls`).setAction(
       const AtokenV2ImplArtifact = await get(ATOKENV2_IMPL_ID);
       await hre.run("verify:verify", {
         address: AtokenV2ImplArtifact.address,
+        constructorArguments: [poolAddress],
+      });
+    } catch (error) {
+      console.error(error);
+    }
+
+    try {
+      const AtokenV4ImplArtifact = await get(ATOKENV4_IMPL_ID);
+      await hre.run("verify:verify", {
+        address: AtokenV4ImplArtifact.address,
         constructorArguments: [poolAddress],
       });
     } catch (error) {

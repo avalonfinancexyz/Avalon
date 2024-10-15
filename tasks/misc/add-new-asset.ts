@@ -97,6 +97,7 @@ task(`add-new-asset`, `add new asset from market config`).setAction(
         const targetToken = await getERC20(tokens[tokenIndex]);
         if(isAdmin){
           const tokenBalance = await targetToken.balanceOf(deployer);
+          if(tokenBalance.toString() == "0") continue;
           const approveTx = await waitForTx(
             await targetToken.approve(
               poolAddress,
@@ -123,6 +124,7 @@ task(`add-new-asset`, `add new asset from market config`).setAction(
           
         } else {
           const tokenBalance = await targetToken.balanceOf(aclAdmin.address);
+          if(tokenBalance.toString() == "0") continue;
           console.log(` - Not admin, executed approve from multisig:`, aclAdmin.address);
           const approveCalldata = targetToken.interface.encodeFunctionData(
             "approve",

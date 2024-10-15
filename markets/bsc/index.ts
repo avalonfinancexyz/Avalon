@@ -16,6 +16,7 @@ import {
   strategySOLVBTCBBN,
   strategyPUMPBTC,
   strategySTBTC,
+  strategyUNIBTC,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -51,7 +52,8 @@ export const BscConfig: IAaveConfiguration = {
     // SOLVBTCENA: strategySOLVBTCENA,
     // SOLVBTCBBN: strategySOLVBTCBBN,
     // PUMPBTC: strategyPUMPBTC,
-    STBTC: strategySTBTC,
+    // STBTC: strategySTBTC,
+    UNIBTC: strategyUNIBTC,
   },
   ReserveAssets: {
     [eBscNetwork.main]: {
@@ -71,6 +73,10 @@ export const BscConfig: IAaveConfiguration = {
     [eBscNetwork.mainStBTC]: {
       BTCB: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
       STBTC: "0xf6718b2701D4a6498eF77D7c152b2137Ab28b8A3",
+    },
+    [eBscNetwork.mainUniBTC]: {
+      BTCB: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      UNIBTC: "0x6B2a01A5f79dEb4c2f3c0eDa7b01DF456FbD726a",
     },
     [eBscNetwork.testnet]: {
       WBNB: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
@@ -118,6 +124,10 @@ export const BscConfig: IAaveConfiguration = {
     [eBscNetwork.mainStBTC]: {
       BTCB: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
       STBTC: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
+    },
+    [eBscNetwork.mainUniBTC]: {
+      BTCB: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
+      UNIBTC: "0xD71E8d3A49A5325F41e5c50F04E74C7281b37f9D",
     },
     [eBscNetwork.testnet]: {
       WBNB: "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE",

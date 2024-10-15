@@ -112,6 +112,7 @@ export enum eBscNetwork {
   main = "bsc",
   mainPumpBTC = "bsc-pumpbtc",
   mainStBTC = "bsc-stbtc",
+  mainUniBTC = "bsc-unibtc",
   testnet = "bsc-testnet",
 }
 

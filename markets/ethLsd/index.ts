@@ -38,13 +38,16 @@ export const EthLSDConfig: IAaveConfiguration = {
   // for testent
   TestnetMarket: false,
   ReservesConfig: {
-    SOLVBTC: strategySOLVBTC,
-    FBTC: strategyFBTC,
-    WBTC: strategyWBTC,
-    SOLVBTCBBN: strategySOLVBTCBBN,
-    // LBTC: strategyLBTC,
+    // SOLVBTC: strategySOLVBTC,
+    // FBTC: strategyFBTC,
+    // WBTC: strategyWBTC,
+    // SOLVBTCBBN: strategySOLVBTCBBN,
+    LBTC: strategyLBTC,
     // EBTC: strategyEBTC,
-    PTcornSolvBTCBBN26DEC2024: rateStrategyPTBTC,
+    // PTcornSolvBTCBBN26DEC2024: rateStrategyPTBTC,
+    // PTcornLBTC26DEC2024: rateStrategyPTBTC,
+    // PTEBTC26DEC2024: rateStrategyPTBTC,
+    // PTLBTC27MAR2025: rateStrategyPTBTC
   },
   ReserveAssets: {
     [eEthereumNetwork.mainLsd]: {
@@ -59,8 +62,12 @@ export const EthLSDConfig: IAaveConfiguration = {
       WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
     },
     [eEthereumNetwork.EBTCLSD]: {
-      EBTC: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
-      WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      // EBTC: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
+      // WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      LBTC: "0x8236a87084f8B84306f72007F36F2618A5634494",
+      PTcornLBTC26DEC2024: "0x332A8ee60EdFf0a11CF3994b1b846BBC27d3DcD6",
+      PTEBTC26DEC2024: "0xb997b3418935a1df0f914ee901ec83927c1509a0",
+      PTLBTC27MAR2025: "0xec5a52c685cc3ad79a6a347abace330d69e0b1ed"
     },
     // [eEthereumNetwork.sepolia]: {
     //   WBTC: "0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F",
@@ -119,6 +126,10 @@ export const EthLSDConfig: IAaveConfiguration = {
     [eEthereumNetwork.EBTCLSD]: {
       EBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      LBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      PTcornLBTC26DEC2024: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      PTEBTC26DEC2024: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+      PTLBTC27MAR2025: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c"
     },
     // [eEthereumNetwork.sepolia]: {
     //   WBTC: "0x2b3f685266524e921cb5dd3094e57e85a3000487",

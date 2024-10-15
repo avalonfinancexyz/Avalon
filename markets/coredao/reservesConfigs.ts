@@ -93,7 +93,7 @@ export const strategySOLVBTC: IReserveParams = {
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
   supplyCap: "0",
-  borrowCap: "0",
+  borrowCap: "2",
   debtCeiling: "0",
   borrowableIsolation: false,
 };
@@ -110,7 +110,7 @@ export const strategySOLVBTCENA: IReserveParams = {
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
-  supplyCap: "0",
+  supplyCap: "1000",
   borrowCap: "0",
   debtCeiling: "0",
   borrowableIsolation: false,

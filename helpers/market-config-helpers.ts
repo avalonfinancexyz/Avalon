@@ -85,6 +85,7 @@ export enum ConfigNames {
   PUMPBTC = "PumpBTC",
   BscPUMPBTC = "Bsc-Pumpbtc",
   BscSTBTC = "Bsc-Stbtc",
+  BscUNIBTC = "Bsc-Unibtc",
   STKaia = "Klaytn-stkaia",
   LBTCLSD = "LBTCLSD",
   EBTCLSD = "EBTCLSD",
@@ -188,6 +189,7 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
     case ConfigNames.ETHSWELL:
       return EthSwellConfig;
     case ConfigNames.BscSTBTC:
+    case ConfigNames.BscUNIBTC:
       return BscConfig;
     case ConfigNames.STKaia:
       return KlaytnConfig;

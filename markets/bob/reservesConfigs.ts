@@ -47,8 +47,7 @@ export const strategyTBTC: IReserveParams = {
 
 export const strategySOLVBTC: IReserveParams = {
   strategy: rateStrategyVolatileBTCTwo,
-  // baseLTVAsCollateral: "7000",
-  baseLTVAsCollateral: "0",
+  baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "12000",
   liquidationProtocolFee: "1000",
@@ -66,8 +65,7 @@ export const strategySOLVBTC: IReserveParams = {
 
 export const strategySOLVBTCBBN: IReserveParams = {
   strategy: rateStrategyVolatileBTCTwo,
-  // baseLTVAsCollateral: "7000",
-  baseLTVAsCollateral: "0",
+  baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "12000",
   liquidationProtocolFee: "1000",

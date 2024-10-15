@@ -176,6 +176,7 @@ export default {
       56
     ),
     [eBscNetwork.mainStBTC]: getCommonNetworkConfig(eBscNetwork.mainStBTC, 56),
+    [eBscNetwork.mainUniBTC]: getCommonNetworkConfig(eBscNetwork.mainUniBTC, 56),
     [eBscNetwork.testnet]: getCommonNetworkConfig(eBscNetwork.testnet, 97),
 
     [eCoredaoNetwork.main]: getCommonNetworkConfig(eCoredaoNetwork.main, 1116),
@@ -394,6 +395,14 @@ export default {
         urls: {
           apiURL: "https://api-cypress.klaytnscope.com/api",
           browserURL: "https://klaytnscope.com/",
+        },
+      },
+      {
+        network: eBOBNetwork.main,
+        chainId: 60808,
+        urls: {
+          apiURL: "https://explorer.gobob.xyz/api",
+          browserURL: "https://explorer.gobob.xyz/",
         },
       },
     ],
