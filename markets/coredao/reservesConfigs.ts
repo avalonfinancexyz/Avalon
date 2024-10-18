@@ -6,6 +6,7 @@ import {
   rateStrategyVolatileOne,
   rateStrategyStableThree,
   rateStrategyVolatileThree,
+  rateStrategyVolatileFour,
 } from "./rateStrategies";
 
 export const strategyWCORE: IReserveParams = {
@@ -80,9 +81,9 @@ export const strategyUSDT: IReserveParams = {
   borrowableIsolation: false,
 };
 
-export const strategySOLVBTC: IReserveParams = {
-  strategy: rateStrategyVolatileThree,
-  baseLTVAsCollateral: "5000",
+export const strategySOLVBTCB: IReserveParams = {
+  strategy: rateStrategyVolatileFour,
+  baseLTVAsCollateral: "7000",
   liquidationThreshold: "8000",
   liquidationBonus: "11500",
   liquidationProtocolFee: "1000",
@@ -93,12 +94,12 @@ export const strategySOLVBTC: IReserveParams = {
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
   supplyCap: "0",
-  borrowCap: "2",
+  borrowCap: "700",
   debtCeiling: "0",
   borrowableIsolation: false,
 };
 
-export const strategySOLVBTCENA: IReserveParams = {
+export const strategySOLVBTCM: IReserveParams = {
   strategy: rateStrategyVolatileThree,
   baseLTVAsCollateral: "5000",
   liquidationThreshold: "8000",
@@ -110,7 +111,7 @@ export const strategySOLVBTCENA: IReserveParams = {
   reserveDecimals: "18",
   aTokenImpl: eContractid.AToken,
   reserveFactor: "3000",
-  supplyCap: "1000",
+  supplyCap: "21",
   borrowCap: "0",
   debtCeiling: "0",
   borrowableIsolation: false,

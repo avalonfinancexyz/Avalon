@@ -10,8 +10,8 @@ import {
   strategyCOREBTC,
   strategyUSDC,
   strategyUSDT,
-  strategySOLVBTC,
-  strategySOLVBTCENA,
+  strategySOLVBTCB,
+  strategySOLVBTCM,
 } from "./reservesConfigs";
 import {
   rateStrategyVolatileOne,
@@ -20,6 +20,7 @@ import {
   rateStrategyVolatileTwo,
   rateStrategyStableThree,
   rateStrategyVolatileThree,
+  rateStrategyVolatileFour,
 } from "./rateStrategies";
 import { ZERO_ADDRESS } from "../../helpers";
 
@@ -39,8 +40,8 @@ export const CoredaoConfig: IAaveConfiguration = {
     COREBTC: strategyCOREBTC,
     USDC: strategyUSDC,
     USDT: strategyUSDT,
-    SOLVBTC: strategySOLVBTC,
-    SOLVBTCENA: strategySOLVBTCENA,
+    SOLVBTCB: strategySOLVBTCB,
+    SOLVBTCM: strategySOLVBTCM,
   },
   ReserveAssets: {
     [eCoredaoNetwork.main]: {
@@ -48,8 +49,8 @@ export const CoredaoConfig: IAaveConfiguration = {
       COREBTC: "0x8034aB88C3512246Bf7894f57C834DdDBd1De01F",
       USDC: "0xa4151b2b3e269645181dccf2d426ce75fcbdeca9",
       USDT: "0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1",
-      SOLVBTC: "0x5B1Fb849f1F76217246B8AAAC053b5C7b15b7dc3",
-      SOLVBTCENA: "0xe04d21d999FaEDf1e72AdE6629e20A11a1ed14FA",
+      SOLVBTCB: "0x5B1Fb849f1F76217246B8AAAC053b5C7b15b7dc3",
+      SOLVBTCM: "0xe04d21d999FaEDf1e72AdE6629e20A11a1ed14FA",
     },
     [eCoredaoNetwork.testnet]: {
       WCORE: "0x0000000000000000000000000000000000000000",
@@ -90,8 +91,8 @@ export const CoredaoConfig: IAaveConfiguration = {
       COREBTC: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
       USDC: "0x4aF9fAFbb7fEe76655F2D328c2f9b9a5BD49a4d9",
       USDT: "0x992388eeEc9F2b0e44059113f2c84e5dA44293db",
-      SOLVBTC: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
-      SOLVBTCENA: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
+      SOLVBTCB: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
+      SOLVBTCM: "0x8b5BA8C397FAcf5516EDAf745c074B8C7fED1D78",
     },
     [eCoredaoNetwork.testnet]: {
       WCORE: "0x95d43F4Abddb71E03A940d4cd654Da5Ce6768443",
@@ -104,6 +105,7 @@ export const CoredaoConfig: IAaveConfiguration = {
     rateStrategyVolatileTwo,
     rateStrategyStableThree,
     rateStrategyVolatileThree,
+    rateStrategyVolatileFour,
   },
 };
 

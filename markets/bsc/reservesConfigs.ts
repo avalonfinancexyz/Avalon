@@ -191,6 +191,24 @@ export const strategySTBTC: IReserveParams = {
   borrowableIsolation: false,
 };
 
+export const strategyPTSolvBTCBBN27MAR2025: IReserveParams = {
+  strategy: rateStrategyVolatileBTCThree,
+  baseLTVAsCollateral: "7000",
+  liquidationThreshold: "8000",
+  liquidationBonus: "12000",
+  liquidationProtocolFee: "1000",
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: false,
+  flashLoanEnabled: false,
+  reserveDecimals: "18",
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: "3000",
+  supplyCap: "0",
+  borrowCap: "0",
+  debtCeiling: "0",
+  borrowableIsolation: false,
+};
+
 export const strategyUNIBTC: IReserveParams = {
   strategy: rateStrategyVolatileBTCThree,
   baseLTVAsCollateral: "7000",

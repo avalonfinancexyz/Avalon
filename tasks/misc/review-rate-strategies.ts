@@ -59,7 +59,11 @@ task(`review-rate-strategies`, ``)
         let { symbol, tokenAddress } = reservesToCheck[index];
 
         let normalizedSymbol = normalizedSymbols.find((s) =>
-          symbol.replace("-", "").toUpperCase().includes(s.toUpperCase())
+          symbol
+            .replace(".", "")
+            .replace("-", "")
+            .toUpperCase()
+            .includes(s.toUpperCase())
         );
         if (symbol.includes(".ENA")) {
           normalizedSymbol = `${normalizedSymbol}ENA`;
