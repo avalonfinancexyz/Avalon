@@ -19,6 +19,7 @@ import {
   eCoredaoNetwork,
   eBOBNetwork,
   eKlaytnNetwork,
+  eIotexNetwork,
 } from "./types";
 
 require("dotenv").config();
@@ -132,6 +133,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eEthereumNetwork.pumpBTC]: `https://eth.meowrpc.com`,
   [eKlaytnNetwork.main]: `https://public-en-cypress.klaytn.net`,
   [eKlaytnNetwork.mainStKaia]: `https://public-en-cypress.klaytn.net`,
+  [eIotexNetwork.main]: `https://babel-api.mainnet.iotex.io`,
 };
 
 export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
@@ -170,6 +172,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eEthereumNetwork.pumpBTC]: true,
   [eKlaytnNetwork.main]: true,
   [eKlaytnNetwork.mainStKaia]: true,
+  [eIotexNetwork.main]: true,
 };
 
 const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {

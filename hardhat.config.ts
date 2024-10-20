@@ -22,6 +22,7 @@ import {
   eCoredaoNetwork,
   eBOBNetwork,
   eKlaytnNetwork,
+  eIotexNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -176,7 +177,10 @@ export default {
       56
     ),
     [eBscNetwork.mainStBTC]: getCommonNetworkConfig(eBscNetwork.mainStBTC, 56),
-    [eBscNetwork.mainUniBTC]: getCommonNetworkConfig(eBscNetwork.mainUniBTC, 56),
+    [eBscNetwork.mainUniBTC]: getCommonNetworkConfig(
+      eBscNetwork.mainUniBTC,
+      56
+    ),
     [eBscNetwork.testnet]: getCommonNetworkConfig(eBscNetwork.testnet, 97),
 
     [eCoredaoNetwork.main]: getCommonNetworkConfig(eCoredaoNetwork.main, 1116),
@@ -217,6 +221,9 @@ export default {
     },
     [eKlaytnNetwork.mainStKaia]: {
       ...getCommonNetworkConfig(eKlaytnNetwork.mainStKaia, 8217),
+    },
+    [eIotexNetwork.main]: {
+      ...getCommonNetworkConfig(eIotexNetwork.main, 4689),
     },
   },
   namedAccounts: {
@@ -403,6 +410,14 @@ export default {
         urls: {
           apiURL: "https://explorer.gobob.xyz/api",
           browserURL: "https://explorer.gobob.xyz/",
+        },
+      },
+      {
+        network: eIotexNetwork.main,
+        chainId: 4689,
+        urls: {
+          apiURL: "https://iotexscout.io/api",
+          browserURL: "https://iotexscan.io/",
         },
       },
     ],

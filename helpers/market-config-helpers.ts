@@ -52,6 +52,7 @@ import BOBConfig from "../markets/bob";
 import KlaytnConfig from "../markets/klaytn";
 import PumpBTCConfig from "../markets/pumpbtc";
 import EthSwellConfig from "../markets/ethswell";
+import IotexConfig from "../markets/iotex";
 
 declare var hre: HardhatRuntimeEnvironment;
 
@@ -89,6 +90,9 @@ export enum ConfigNames {
   STKaia = "Klaytn-stkaia",
   LBTCLSD = "LBTCLSD",
   EBTCLSD = "EBTCLSD",
+
+  // iotex
+  Iotex = "Iotex",
 }
 
 export const getParamPerNetwork = <T>(
@@ -193,6 +197,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
       return BscConfig;
     case ConfigNames.STKaia:
       return KlaytnConfig;
+    case ConfigNames.Iotex:
+      return IotexConfig;
     default:
       throw new Error(
         `Unsupported pool configuration: ${configName} is not one of the supported configs ${Object.values(

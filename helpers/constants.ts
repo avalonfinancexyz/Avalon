@@ -15,6 +15,7 @@ import {
   eCoredaoNetwork,
   eBOBNetwork,
   eKlaytnNetwork,
+  eIotexNetwork,
 } from "./types";
 
 const {
@@ -77,6 +78,9 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eBOBNetwork.main]: "0x4200000000000000000000000000000000000006",
   [eKlaytnNetwork.main]: "0x19aac5f612f524b754ca7e7c41cbfa2e981a4432",
   [eKlaytnNetwork.mainStKaia]: "0x19aac5f612f524b754ca7e7c41cbfa2e981a4432",
+
+  // iotex
+  [eIotexNetwork.main]: "0xa00744882684c3e4747faefd68d283ea44099d03",
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -178,6 +182,9 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   [eKlaytnNetwork.main]: "0x9cc5a6ac600f9558c9f1651d5bd140ce9b56344a",
   [eKlaytnNetwork.mainStKaia]: "0x9cc5a6ac600f9558c9f1651d5bd140ce9b56344a",
 
+  // iotex
+  [eIotexNetwork.main]: "0x6717DC0D87a9BD6849F96948c29e8c8875c10096",
+
   // LSD
   [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
   [eEthereumNetwork.mainSwell]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
@@ -236,6 +243,9 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   [eKlaytnNetwork.main]: "0x9cc5a6ac600f9558c9f1651d5bd140ce9b56344a",
   [eKlaytnNetwork.mainStKaia]: "0x9cc5a6ac600f9558c9f1651d5bd140ce9b56344a",
 
+  // iotex
+  [eIotexNetwork.main]: "0x6717DC0D87a9BD6849F96948c29e8c8875c10096",
+
   // LSD
   [eEthereumNetwork.mainLsd]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
   [eEthereumNetwork.mainSwell]: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
@@ -288,6 +298,9 @@ export const POOL_ADMIN: Record<string, string> = {
   [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eKlaytnNetwork.mainStKaia]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
+  // iotex
+  [eIotexNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eEthereumNetwork.mainSwell]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eEthereumNetwork.pumpBTC]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -329,6 +342,9 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eBOBNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eKlaytnNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eKlaytnNetwork.mainStKaia]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  // iotex
+  [eIotexNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eEthereumNetwork.mainSwell]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
@@ -408,6 +424,9 @@ export const MULTISIG_ADDRESS: { [key: string]: string } = {
 
   [eBOBNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
   [eKlaytnNetwork.mainStKaia]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
+
+  // iotex
+  [eIotexNetwork.main]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",
 
   // LSD
   [eEthereumNetwork.mainLsd]: "0xd955F0c167adbf7d553fc4D59A964A1b115Cc093",

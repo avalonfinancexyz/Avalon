@@ -25,7 +25,8 @@ export type eNetwork =
   | eBscNetwork
   | eCoredaoNetwork
   | eBOBNetwork
-  | eKlaytnNetwork;
+  | eKlaytnNetwork
+  | eIotexNetwork;
 
 type eTenderlyNetwork = "tenderly";
 
@@ -130,6 +131,11 @@ export enum eKlaytnNetwork {
   main = "klaytn",
   mainStKaia = "klaytn-stkaia",
   testnet = "klaytn-testnet",
+}
+
+export enum eIotexNetwork {
+  main = "iotex",
+  testnet = "iotex-testnet",
 }
 
 export enum EthereumNetworkNames {
